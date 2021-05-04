@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NovoMarket</string>
+    <string name="valnova">NovaMarket</string>
+    <string name="valregistro">Registro</string>
+    <string name="vallogin">Login</string>
+    <string name="valtexto">Texto</string>
+    <string name="valmenu">Menu</string>
+    <string name="valcoment">¿Ya tiene una cuenta? Click para ir a login</string>
+    <string name="valusername">Username</string>
+    <string name="valpassword">Password</string>
+    <string name="valcoment2">¿Aún no se ha registrado? Click para registrarse</string>
+</resources>
