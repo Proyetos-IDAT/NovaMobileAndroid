@@ -9,4 +9,26 @@
     <string name="valusername">Username</string>
     <string name="valpassword">Password</string>
     <string name="valcoment2">¿Aún no se ha registrado? Click para registrarse</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_cliente">Cliente</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="valcliente">Cliente</string>
+    <string name="valGuardar">Guardar</string>
+    <string name="ValEliminar">Eliminar</string>
+    <string name="valEliminar">Eliminar</string>
+    <string name="valIdCliente">Id Cliente</string>
+    <string name="ValApellidos">Apellidos</string>
+    <string name="ValNombre">Nombre</string>
+    <string name="ValNumero">Numero</string>
+    <string name="valVolver">Volver</string>
 </resources>
