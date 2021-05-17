@@ -40,6 +40,14 @@ public class ClienteActivity extends AppCompatActivity {
 
         listarClientes();
         FloatingActionButton fab = findViewById(R.id.fab);
+        FloatingActionButton fabregresar=findViewById(R.id.fabRegresar);
+        fabregresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ClienteActivity.this,MenuActivity.class);
+                startActivity(intent);
+            }
+        });
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

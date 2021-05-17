@@ -49,11 +49,11 @@ public class LoginActivity extends AppCompatActivity {
         String password = etPassword.getText().toString().trim();
 
         if (userName.isEmpty()) {
-            etUsername.setError("Username is required");
+            etUsername.setError("Usuario requerido");
             etUsername.requestFocus();
             return;
         } else if (password.isEmpty()) {
-            etPassword.setError("Password is required");
+            etPassword.setError("Password requerido");
             etPassword.requestFocus();
             return;
         }
@@ -74,10 +74,10 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 if (s.equals(userName)) {
-                    Toast.makeText(LoginActivity.this, "User logged in!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this, "Usuario logeado", Toast.LENGTH_LONG).show();
                     startActivity(new Intent(LoginActivity.this, MenuActivity.class).putExtra("username", userName));
                 } else {
-                    Toast.makeText(LoginActivity.this, "Incorrect Credentials! Try again!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this, "Error en los datos ingresados", Toast.LENGTH_LONG).show();
                 }
             }
 

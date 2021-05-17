@@ -49,11 +49,11 @@ public class RegisterActivity extends AppCompatActivity {
         String password = etPassword.getText().toString().trim();
 
         if (userName.isEmpty()) {
-            etUsername.setError("Username is required");
+            etUsername.setError("Usuario requerido");
             etUsername.requestFocus();
             return;
         } else if (password.isEmpty()) {
-            etPassword.setError("Password is required");
+            etPassword.setError("Password requerido");
             etPassword.requestFocus();
             return;
         }
@@ -74,10 +74,10 @@ public class RegisterActivity extends AppCompatActivity {
                 }
 
                 if (s.equals("SUCCESS")) {
-                    Toast.makeText(RegisterActivity.this, "Successfully registered. Please login", Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegisterActivity.this, "El usuario fue registrado con éxito", Toast.LENGTH_LONG).show();
                     startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                 } else {
-                    Toast.makeText(RegisterActivity.this, "User already exists!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegisterActivity.this, "El usuario ya existe", Toast.LENGTH_LONG).show();
                 }
             }
 

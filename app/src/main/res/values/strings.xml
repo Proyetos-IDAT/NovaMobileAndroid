@@ -6,8 +6,8 @@
     <string name="valtexto">Texto</string>
     <string name="valmenu">Menu</string>
     <string name="valcoment">¿Ya tiene una cuenta? Click para ir a login</string>
-    <string name="valusername">Username</string>
-    <string name="valpassword">Password</string>
+    <string name="valusername">Ingrese su Username</string>
+    <string name="valpassword">Ingrese su Password</string>
     <string name="valcoment2">¿Aún no se ha registrado? Click para registrarse</string>
     <string name="title_activity_main2">MainActivity</string>
     <string name="title_home">Home</string>
@@ -31,4 +31,6 @@
     <string name="ValNombre">Nombre</string>
     <string name="ValNumero">Numero</string>
     <string name="valVolver">Volver</string>
+    <string name="valLCliente">Lista de Clientes</string>
+    <string name="valCerrarSe">Cerrar Sesión</string>
 </resources>
