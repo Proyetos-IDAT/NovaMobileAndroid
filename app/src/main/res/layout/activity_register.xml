@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo_degradado"
     tools:context=".RegisterActivity">
 
 
@@ -15,7 +16,7 @@
         android:padding="10dp"
         android:text="@string/valnova"
 
-        android:textColor="@android:color/holo_orange_dark"
+        android:textColor="@color/ic_launcher_background"
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,9 +72,9 @@
 
         android:layout_marginBottom="80dp"
         android:text="REGISTER"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@color/ic_launcher_background"
         android:textSize="16sp"
-        app:backgroundTint="@android:color/holo_orange_dark"
+        app:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
