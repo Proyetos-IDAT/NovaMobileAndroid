@@ -12,7 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NovoMarket"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".ProveedorEdActivity"></activity>
+        <activity
+            android:name=".ProveedorActivity"
+            android:label="@string/title_activity_proveedor"
+            android:theme="@style/Theme.NovoMarket.NoActionBar" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".ClienteEdActivity" />
         <activity
             android:name=".ClienteActivity"

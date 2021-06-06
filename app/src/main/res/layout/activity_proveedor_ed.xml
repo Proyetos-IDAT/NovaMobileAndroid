@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_degradado"
+    tools:context=".ProveedorEdActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10px">
+
+        <TextView
+            android:id="@+id/IdProve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/validProveedor"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/txtIdProve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false" />
+
+        <TextView
+            android:id="@+id/Nomprove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/validNomprove"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/txtNomprove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true" />
+
+        <TextView
+            android:id="@+id/Ruc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/validRuc"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+
+        <EditText
+            android:id="@+id/txtRuc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true" />
+
+        <TextView
+            android:id="@+id/Nomcontacto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/validNomcontacto"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/txtNomcontacto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true" />
+
+        <TextView
+            android:id="@+id/Direccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/validDireccion"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+
+        <EditText
+            android:id="@+id/txtDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true" />
+
+        <TextView
+            android:id="@+id/Telefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/validTelefono"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/txtTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true" />
+
+        <Button
+            android:id="@+id/btnSaveprove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/valGuardar"
+            app:backgroundTint="@color/black" />
+
+        <Button
+            android:id="@+id/btnEliminarprove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ValEliminar"
+            app:backgroundTint="@color/black" />
+
+        <Button
+            android:id="@+id/btnVolverprove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/valVolver"
+            app:backgroundTint="@color/black" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

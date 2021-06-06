@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
 
-    Button btncliente;
+    Button btncliente,btnproveedor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,10 +20,17 @@ public class MenuActivity extends AppCompatActivity {
         TextView tvWelcome = findViewById(R.id.tvWelcome);
         tvWelcome.setText(welcomeText);
         btncliente=findViewById(R.id.btncliente);
+        btnproveedor=findViewById(R.id.btnproveedores);
         btncliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MenuActivity.this,ClienteActivity.class));
+            }
+        });
+        btnproveedor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MenuActivity.this,ProveedorActivity.class));
             }
         });
         findViewById(R.id.btnCerrarSesion).setOnClickListener(new View.OnClickListener() {

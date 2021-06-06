@@ -33,4 +33,13 @@
     <string name="valVolver">Volver</string>
     <string name="valLCliente">Lista de Clientes</string>
     <string name="valCerrarSe">Cerrar Sesión</string>
+    <string name="title_activity_proveedor">ProveedorActivity</string>
+    <string name="Proveedores">valproveedores</string>
+    <string name="valproveedores">Proveedores</string>
+    <string name="validProveedor">Id Proveedor</string>
+    <string name="validNomprove">Nombre Proveedor</string>
+    <string name="validRuc">RUC</string>
+    <string name="validNomcontacto">Nombre Contacto</string>
+    <string name="validDireccion">Direccion</string>
+    <string name="validTelefono">Telefono</string>
 </resources>
