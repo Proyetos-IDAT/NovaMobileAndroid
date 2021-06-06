@@ -33,13 +33,13 @@ public class ClienteAdapter extends ArrayAdapter<Cliente> {
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = layoutInflater.inflate(R.layout.content_cliente, parent, false);
         TextView txtIdCliente =  rowView.findViewById(R.id.IdCliente);
-        TextView txtApellidos = rowView.findViewById(R.id.Apellidos);
         TextView txtNombre = rowView.findViewById(R.id.Nombre);
+        TextView txtApellidos = rowView.findViewById(R.id.Apellidos);
         TextView txtNumero =  rowView.findViewById(R.id.Numero);
         //asignando datos dentro de las cajas de textos funcionando sin problemas.
         txtIdCliente.setText(String.format("ID:%s", clientes.get(position).getIdcli()));
-        txtApellidos.setText(String.format("APELLIDO:%s", clientes.get(position).getApecli()));
         txtNombre.setText(String.format("NOMBRE:%s", clientes.get(position).getNomcli()));
+        txtApellidos.setText(String.format("APELLIDO:%s", clientes.get(position).getApecli()));
         txtNumero.setText(String.format("NUMERO:%s", clientes.get(position).getNumcli()));
 
         //aqui se va a poner cuando el usuario presiona en una de las filas va a po
@@ -49,8 +49,8 @@ public class ClienteAdapter extends ArrayAdapter<Cliente> {
                 Intent intent=new Intent(context, ClienteEdActivity.class);
                 //Aquien en el primer intent lo estamos transformando en cadena(string)
                 intent.putExtra("ID",String.valueOf(clientes.get(position).getIdcli()));
-                intent.putExtra("APELLIDOS", clientes.get(position).getApecli());
                 intent.putExtra("NOMBRE", clientes.get(position).getNomcli());
+                intent.putExtra("APELLIDOS", clientes.get(position).getApecli());
                 intent.putExtra("NUMERO", clientes.get(position).getNumcli());
                 //para mostrar todoelformulario
                 context.startActivity(intent);

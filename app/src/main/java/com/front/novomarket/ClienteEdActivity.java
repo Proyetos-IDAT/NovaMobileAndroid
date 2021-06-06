@@ -24,12 +24,16 @@ public class ClienteEdActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cliente_ed);
+
         TextView idcli = findViewById(R.id.Id);
         EditText txtId = findViewById(R.id.txtId);
-        TextView apellidos = findViewById(R.id.apellidos);
-        final EditText txtApellidos = findViewById(R.id.txtApellidos);
+
         TextView nombres = findViewById(R.id.nombres);
         final EditText txtNombres = findViewById(R.id.txtNombres);
+
+        TextView apellidos = findViewById(R.id.apellidos);
+        final EditText txtApellidos = findViewById(R.id.txtApellidos);
+
         TextView numero = findViewById(R.id.numero);
         final EditText txtNumero = findViewById(R.id.txtNumero);
 
@@ -40,8 +44,8 @@ public class ClienteEdActivity extends AppCompatActivity {
         //Estamos obteniendo los valores de una fila
         Bundle bundle = getIntent().getExtras();
         String id = bundle.getString("ID");
-        String nom = bundle.getString("APELLIDOS");
         String ape = bundle.getString("NOMBRE");
+        String nom = bundle.getString("APELLIDOS");
         String num = bundle.getString("NUMERO");
 
         txtId.setText(id);
@@ -58,8 +62,8 @@ public class ClienteEdActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Cliente c=new Cliente();
                 //hemos seteado los nombres y apellidos enviandolo al metodo llevando después al webservice
-                c.setApecli(txtApellidos.getText().toString());
                 c.setNomcli(txtNombres.getText().toString());
+                c.setApecli(txtApellidos.getText().toString());
                 c.setNumcli(txtNumero.getText().toString());
                 //colocar condición para cuando guarde y actualize
                 if(id.trim().length()==0|| id.equals("")){

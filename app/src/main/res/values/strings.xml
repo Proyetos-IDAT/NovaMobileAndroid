@@ -27,8 +27,8 @@
     <string name="ValEliminar">Eliminar</string>
     <string name="valEliminar">Eliminar</string>
     <string name="valIdCliente">Id Cliente</string>
-    <string name="ValApellidos">Apellidos</string>
     <string name="ValNombre">Nombre</string>
+    <string name="ValApellidos">Apellidos</string>
     <string name="ValNumero">Numero</string>
     <string name="valVolver">Volver</string>
     <string name="valLCliente">Lista de Clientes</string>

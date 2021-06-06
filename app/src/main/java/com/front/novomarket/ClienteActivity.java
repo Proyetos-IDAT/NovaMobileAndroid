@@ -52,8 +52,8 @@ public class ClienteActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(ClienteActivity.this, ClienteEdActivity.class);
                 intent.putExtra("ID","");
-                intent.putExtra("APELLIDO","");
                 intent.putExtra("NOMBRE","");
+                intent.putExtra("APELLIDO","");
                 intent.putExtra("NUMERO","");
                 startActivity(intent);
             }

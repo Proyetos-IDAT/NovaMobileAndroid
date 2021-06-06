@@ -27,6 +27,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:enabled="false" />
+        <TextView
+            android:id="@+id/nombres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ValNombre"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/txtNombres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/apellidos"
@@ -42,19 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/nombres"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/ValNombre"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold|italic" />
 
-        <EditText
-            android:id="@+id/txtNombres"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/numero"
