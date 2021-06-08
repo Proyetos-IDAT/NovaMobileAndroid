@@ -61,7 +61,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
 
-
     <Button
         android:id="@+id/btnproveedores"
         android:layout_width="0dp"
@@ -74,14 +73,23 @@
         app:layout_constraintTop_toBottomOf="@+id/btncliente" />
 
     <Button
+        android:id="@+id/btnmetodopago"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/valmetodopago"
+        app:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnproveedores" />
+
+    <Button
         android:id="@+id/btnCerrarSesion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:text="@string/valCerrarSe"
         app:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnproveedores" />
+        app:layout_constraintTop_toBottomOf="@+id/btnmetodopago" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -51,10 +51,10 @@ public class ClienteActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(ClienteActivity.this, ClienteEdActivity.class);
-                intent.putExtra("ID","");
-                intent.putExtra("NOMBRE","");
-                intent.putExtra("APELLIDO","");
-                intent.putExtra("NUMERO","");
+                intent.putExtra("ID"," ");
+                intent.putExtra("NOMBRE"," ");
+                intent.putExtra("APELLIDO"," ");
+                intent.putExtra("NUMERO"," ");
                 startActivity(intent);
             }
         });

@@ -7,7 +7,6 @@ public class Cliente {
     private String numcli;
 
     public Cliente(){
-
     }
 
     public Cliente(int idcli, String apecli, String nomcli, String numcli) {

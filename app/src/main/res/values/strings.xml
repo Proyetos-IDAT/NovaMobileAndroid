@@ -42,4 +42,7 @@
     <string name="validNomcontacto">Nombre Contacto</string>
     <string name="validDireccion">Direccion</string>
     <string name="validTelefono">Telefono</string>
+    <string name="valmetodopago">Metodo de Pago</string>
+    <string name="validMetPag">Id Metodo Pago</string>
+    <string name="validTipopago">Tipo de Pago</string>
 </resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_degradado"
+    tools:context=".MetodoPagoEdActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10px">
+
+        <TextView
+            android:id="@+id/IdMetPago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/validMetPag"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/txtIdMetPago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false" />
+
+        <TextView
+            android:id="@+id/TipoPago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/validTipopago"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/txtTipoPago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true" />
+
+        <Button
+            android:id="@+id/btnSavemetpag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/valGuardar"
+            app:backgroundTint="@color/black" />
+
+        <Button
+            android:id="@+id/btnEliminarmetpag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ValEliminar"
+            app:backgroundTint="@color/black" />
+
+        <Button
+            android:id="@+id/btnVolvermetpag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/valVolver"
+            app:backgroundTint="@color/black" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

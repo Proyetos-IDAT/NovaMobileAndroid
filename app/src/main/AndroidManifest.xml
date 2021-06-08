@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NovoMarket"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ProveedorEdActivity"></activity>
+        <activity android:name=".MetodoPagoActivity"></activity>
+        <activity android:name=".MetodoPagoEdActivity" />
+        <activity android:name=".ProveedorEdActivity" />
         <activity
             android:name=".ProveedorActivity"
             android:label="@string/title_activity_proveedor"

@@ -1,6 +1,7 @@
 package com.front.novomarket.utils;
 
 import com.front.novomarket.model.Cliente;
+import com.front.novomarket.model.MetodoPago;
 import com.front.novomarket.model.Proveedor;
 import com.front.novomarket.model.User;
 
@@ -49,5 +50,19 @@ public interface API {
 
     @POST("eliminarpro/{id}")
     Call<Proveedor>deleteProveedor(@Path("id") int id);
-    //----------------------------------------------------------
+   //---------------------------------------------------------
+
+   //-------------Metodo Pago Service
+
+   @GET("listarMetodoPago")
+   Call<List<MetodoPago>>getMetodoPago();
+
+   @POST("agregarMetodoPago")
+   Call<MetodoPago>addMetodoPago(@Body MetodoPago metodopago);
+
+   @POST("actualizarMetodoPago/{id}")
+   Call<MetodoPago>updateMetodoPago(@Body MetodoPago metodopago, @Path("id") int id);
+
+   @POST("eliminarMetodoPago/{id}")
+   Call<MetodoPago>deleteMetodoPago(@Path("id") int id);
 }

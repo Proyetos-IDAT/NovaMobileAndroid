@@ -10,7 +10,6 @@ public class Proveedor {
     private String telefono;
 
     public Proveedor(){
-
     }
 
     public Proveedor(int idprove, String nomprove, String ruc, String nomcontacto, String direccion, String telefono) {

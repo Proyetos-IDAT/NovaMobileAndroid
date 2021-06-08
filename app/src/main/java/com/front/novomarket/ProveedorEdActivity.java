@@ -42,7 +42,6 @@ public class ProveedorEdActivity extends AppCompatActivity {
         Button btnVolverpro = findViewById(R.id.btnVolverprove);
         Button btnEliminarpro = findViewById(R.id.btnEliminarprove);
 
-
         Bundle bundle = getIntent().getExtras();
         String id = bundle.getString("ID");
         String nompr = bundle.getString("NOMBRE PROVEEDOR");
@@ -113,7 +112,7 @@ public class ProveedorEdActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Proveedor> call, Response<Proveedor> response) {
                 if(response!=null){
-                    Toast.makeText(ProveedorEdActivity.this,"Se agrego con éxito el Proveedor",Toast.LENGTH_LONG).show();
+                    Toast.makeText(ProveedorEdActivity.this,"Se agregó con éxito el Proveedor",Toast.LENGTH_LONG).show();
                 }
             }
 
@@ -131,7 +130,7 @@ public class ProveedorEdActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Proveedor> call, Response<Proveedor> response) {
                 if(response.isSuccessful()){
-                    Toast.makeText(ProveedorEdActivity.this,"Se Actualizó con éxito el Proveedor",Toast.LENGTH_LONG).show();
+                    Toast.makeText(ProveedorEdActivity.this,"Se actualizó con éxito el Proveedor",Toast.LENGTH_LONG).show();
                 }
             }
 
@@ -149,7 +148,7 @@ public class ProveedorEdActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Proveedor> call, Response<Proveedor> response) {
                 if(response.isSuccessful()){
-                    Toast.makeText(ProveedorEdActivity.this,"Se Elimino con éxito el Proveedor",Toast.LENGTH_LONG).show();
+                    Toast.makeText(ProveedorEdActivity.this,"Se eliminó con éxito el Proveedor",Toast.LENGTH_LONG).show();
                 }
             }
 
