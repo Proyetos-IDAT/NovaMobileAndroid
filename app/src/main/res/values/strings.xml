@@ -48,4 +48,6 @@
     <string name="valIdCategoria">Id Categoria</string>
     <string name="ValNomCategoria">Nombre de la Categoria</string>
     <string name="valcategoria">CATEGORIAS</string>
+    <string name="valingr">Ingresar</string>
+    <string name="valclienteman">Cliente</string>
 </resources>

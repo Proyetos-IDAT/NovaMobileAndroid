@@ -94,10 +94,12 @@
         android:layout_height="wrap_content"
 
         android:layout_marginBottom="96dp"
-        android:text="LOGIN"
+        android:text="@string/valingr"
         android:textColor="@color/ic_launcher_background"
         android:textSize="16sp"
         app:backgroundTint="@color/black"
+        app:icon="@drawable/ic_baseline_login_24"
+        app:iconGravity="textStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
