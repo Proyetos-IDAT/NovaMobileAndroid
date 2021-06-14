@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_degradado"
-    tools:context=".ClienteActivity">
+    tools:context=".CategoriaActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
 
     </LinearLayout>
 
-    <include layout="@layout/content_cliente" />
+    <include layout="@layout/content_categoria" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"

@@ -1,5 +1,6 @@
 package com.front.novomarket.utils;
 
+import com.front.novomarket.model.Categoria;
 import com.front.novomarket.model.Cliente;
 import com.front.novomarket.model.MetodoPago;
 import com.front.novomarket.model.Proveedor;
@@ -15,7 +16,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public interface API {
-   //--------User Login
+    //--------User Login
     @POST("register")
     Call<ResponseBody> createUser (@Body User user);
 
@@ -38,7 +39,6 @@ public interface API {
     //---------------------------------------------------------
 
     //-------------Proveedor Service
-
     @GET("listarpro")
     Call<List<Proveedor>>getProveedor();
 
@@ -50,19 +50,34 @@ public interface API {
 
     @POST("eliminarpro/{id}")
     Call<Proveedor>deleteProveedor(@Path("id") int id);
-   //---------------------------------------------------------
+    //---------------------------------------------------------
 
-   //-------------Metodo Pago Service
+    //-------------Metodo Pago Service
+    @GET("listarMetodoPago")
+    Call<List<MetodoPago>>getMetodoPago();
 
-   @GET("listarMetodoPago")
-   Call<List<MetodoPago>>getMetodoPago();
+    @POST("agregarMetodoPago")
+    Call<MetodoPago>addMetodoPago(@Body MetodoPago metodopago);
 
-   @POST("agregarMetodoPago")
-   Call<MetodoPago>addMetodoPago(@Body MetodoPago metodopago);
+    @POST("actualizarMetodoPago/{id}")
+    Call<MetodoPago>updateMetodoPago(@Body MetodoPago metodopago, @Path("id") int id);
 
-   @POST("actualizarMetodoPago/{id}")
-   Call<MetodoPago>updateMetodoPago(@Body MetodoPago metodopago, @Path("id") int id);
+    @POST("eliminarMetodoPago/{id}")
+    Call<MetodoPago>deleteMetodoPago(@Path("id") int id);
+    //---------------------------------------------------------
 
-   @POST("eliminarMetodoPago/{id}")
-   Call<MetodoPago>deleteMetodoPago(@Path("id") int id);
+    //-------------Categoria Service
+    @GET("listarcat")
+    Call<List<Categoria>>getCategoria();
+
+    @POST("agregarcat")
+    Call<Categoria>addCategoria(@Body Categoria categoria);
+
+    @POST("actualizarcat/{id}")
+    Call<Categoria>updateCategoria(@Body Categoria categoria, @Path("id") int id);
+
+    @POST("eliminarcat/{id}")
+    Call<Categoria>deleteCategoria(@Path("id") int id);
+    //---------------------------------------------------------
+
 }

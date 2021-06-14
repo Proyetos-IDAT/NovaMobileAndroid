@@ -9,11 +9,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.front.novomarket.model.Categoria;
 import com.front.novomarket.model.MetodoPago;
 
 public class MenuActivity extends AppCompatActivity {
-
-    Button btncliente,btnproveedor,btnmetodopago;
+    Button btncliente,btnproveedor,btnmetodopago,btncategoria;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +24,7 @@ public class MenuActivity extends AppCompatActivity {
         btncliente=findViewById(R.id.btncliente);
         btnproveedor=findViewById(R.id.btnproveedores);
         btnmetodopago=findViewById(R.id.btnmetodopago);
+        btncategoria=findViewById(R.id.btncategoria);
         btncliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,6 +41,12 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MenuActivity.this,MetodoPagoActivity.class));
+            }
+        });
+        btncategoria.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MenuActivity.this,CategoriaActivity.class));
             }
         });
         findViewById(R.id.btnCerrarSesion).setOnClickListener(new View.OnClickListener() {

@@ -59,6 +59,7 @@ public class ClienteActivity extends AppCompatActivity {
             }
         });
     }
+
     public void listarClientes(){
         Call<List<Cliente>>call= RetrofitClient.getInstance().getAPI().getCliente();
         call.enqueue(new Callback<List<Cliente>>() {

@@ -11,12 +11,12 @@
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="64dp"
 
         android:fontFamily="serif-monospace"
         android:padding="10dp"
 
-        android:text="@string/valnova"
+        android:text="@string/valnovo"
         android:textColor="@color/ic_launcher_background"
         android:textSize="50sp"
         android:textStyle="bold"
@@ -28,7 +28,7 @@
         android:id="@+id/btnToRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="28dp"
         android:text="@string/valregistro"
         android:textColor="@color/ic_launcher_background"
 
@@ -37,14 +37,14 @@
         app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/btnToLogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnToLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="96dp"
         android:text="LOGIN"
 
         android:textColor="@color/ic_launcher_background"

@@ -150,6 +150,4 @@ public class ClienteEdActivity extends AppCompatActivity {
         Intent intent=new Intent(ClienteEdActivity.this,ClienteActivity.class);
         startActivity(intent);
     }
-
-
 }

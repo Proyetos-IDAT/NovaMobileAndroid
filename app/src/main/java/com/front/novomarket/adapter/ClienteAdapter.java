@@ -21,10 +21,10 @@ public class ClienteAdapter extends ArrayAdapter<Cliente> {
     private Context context;
     private List<Cliente> clientes;
 
-    public ClienteAdapter(@NonNull Context context, int resource , @NonNull List<Cliente> objects) {
+    public ClienteAdapter(@NonNull Context context, int resource, @NonNull List<Cliente> objects) {
         super(context, resource,objects);
         this.context=context;
-        this.clientes =objects;
+        this.clientes=objects;
     }
 
     @NonNull
@@ -37,10 +37,10 @@ public class ClienteAdapter extends ArrayAdapter<Cliente> {
         TextView txtApellidos = rowView.findViewById(R.id.Apellidos);
         TextView txtNumero =  rowView.findViewById(R.id.Numero);
         //asignando datos dentro de las cajas de textos funcionando sin problemas.
-        txtIdCliente.setText(String.format("ID:%s", clientes.get(position).getIdcli()));
-        txtNombre.setText(String.format("NOMBRE:%s", clientes.get(position).getNomcli()));
-        txtApellidos.setText(String.format("APELLIDO:%s", clientes.get(position).getApecli()));
-        txtNumero.setText(String.format("NUMERO:%s", clientes.get(position).getNumcli()));
+        txtIdCliente.setText(String.format("ID: %s", clientes.get(position).getIdcli()));
+        txtNombre.setText(String.format("NOMBRE: %s", clientes.get(position).getNomcli()));
+        txtApellidos.setText(String.format("APELLIDO: %s", clientes.get(position).getApecli()));
+        txtNumero.setText(String.format("NUMERO: %s", clientes.get(position).getNumcli()));
 
         //aqui se va a poner cuando el usuario presiona en una de las filas va a po
         rowView.setOnClickListener(new View.OnClickListener() {
@@ -56,7 +56,6 @@ public class ClienteAdapter extends ArrayAdapter<Cliente> {
                 context.startActivity(intent);
             }
         });
-
 
         //Implementando metodos en cada filas va a poder editar
         return rowView;

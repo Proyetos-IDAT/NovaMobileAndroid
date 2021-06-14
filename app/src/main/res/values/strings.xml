@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">NovoMarket</string>
-    <string name="valnova">NovaMarket</string>
+    <string name="valnovo">NovoMarket</string>
     <string name="valregistro">Registro</string>
     <string name="vallogin">Login</string>
     <string name="valtexto">Texto</string>
@@ -37,12 +37,15 @@
     <string name="Proveedores">valproveedores</string>
     <string name="valproveedores">Proveedores</string>
     <string name="validProveedor">Id Proveedor</string>
-    <string name="validNomprove">Nombre Proveedor</string>
+    <string name="validNomprove">Nombre del Proveedor</string>
     <string name="validRuc">RUC</string>
-    <string name="validNomcontacto">Nombre Contacto</string>
+    <string name="validNomcontacto">Nombre del Contacto</string>
     <string name="validDireccion">Direccion</string>
     <string name="validTelefono">Telefono</string>
     <string name="valmetodopago">Metodo de Pago</string>
     <string name="validMetPag">Id Metodo Pago</string>
     <string name="validTipopago">Tipo de Pago</string>
+    <string name="valIdCategoria">Id Categoria</string>
+    <string name="ValNomCategoria">Nombre de la Categoria</string>
+    <string name="valcategoria">CATEGORIAS</string>
 </resources>

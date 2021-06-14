@@ -18,15 +18,16 @@ import com.front.novomarket.model.Proveedor;
 
 import java.util.List;
 public class ProveedorAdapter extends ArrayAdapter<Proveedor>{
-        private Context context;
-        private List<Proveedor> proveedores;
+    private Context context;
+    private List<Proveedor> proveedores;
 
-        //Se crea un contructor para llamar los objetes y contexto
-        public ProveedorAdapter(@NonNull Context context, int resource , @NonNull List<Proveedor> objects) {
-            super(context, resource,objects);
-            this.context=context;
-            this.proveedores =objects;
-        }
+    //Se crea un contructor para llamar los objetes y contexto
+    public ProveedorAdapter(@NonNull Context context, int resource, @NonNull List<Proveedor> objects) {
+        super(context, resource,objects);
+        this.context=context;
+        this.proveedores=objects;
+    }
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -39,12 +40,12 @@ public class ProveedorAdapter extends ArrayAdapter<Proveedor>{
         TextView txtDireccion =  rowView.findViewById(R.id.Direccion);
         TextView txtTelefono =  rowView.findViewById(R.id.Telefono);
 
-        txtIdProveedor.setText(String.format("ID:%s", proveedores.get(position).getIdprove()));
-        txtNomProve.setText(String.format("NOMBRE PROVEEDOR:%s", proveedores.get(position).getNomprove()));
-        txtRuc.setText(String.format("RUC:%s", proveedores.get(position).getRuc()));
-        txtNomContacto.setText(String.format("NOMBRE CONTACTO:%s", proveedores.get(position).getNomcontacto()));
-        txtDireccion.setText(String.format("DIRECCION:%s", proveedores.get(position).getDireccion()));
-        txtTelefono.setText(String.format("TELEFONO:%s", proveedores.get(position).getTelefono()));
+        txtIdProveedor.setText(String.format("ID: %s", proveedores.get(position).getIdprove()));
+        txtNomProve.setText(String.format("NOMBRE PROVEEDOR: %s", proveedores.get(position).getNomprove()));
+        txtRuc.setText(String.format("RUC: %s", proveedores.get(position).getRuc()));
+        txtNomContacto.setText(String.format("NOMBRE CONTACTO: %s", proveedores.get(position).getNomcontacto()));
+        txtDireccion.setText(String.format("DIRECCION: %s", proveedores.get(position).getDireccion()));
+        txtTelefono.setText(String.format("TELEFONO: %s", proveedores.get(position).getTelefono()));
 
         rowView.setOnClickListener(new View.OnClickListener() {
             @Override
