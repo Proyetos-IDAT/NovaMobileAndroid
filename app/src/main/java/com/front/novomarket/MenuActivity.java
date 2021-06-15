@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.front.novomarket.model.Categoria;
-import com.front.novomarket.model.MetodoPago;
 
 public class MenuActivity extends AppCompatActivity {
     Button btncliente,btnproveedor,btnmetodopago,btncategoria;
@@ -18,7 +16,8 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        String welcomeText = "Welcome " + getIntent().getStringExtra("username") + "!";
+        //String welcomeText = "Welcome " + getIntent().getStringExtra("username") + "!";
+        String welcomeText="Bienvenido";
         TextView tvWelcome = findViewById(R.id.tvWelcome);
         tvWelcome.setText(welcomeText);
         btncliente=findViewById(R.id.btncliente);
@@ -34,6 +33,7 @@ public class MenuActivity extends AppCompatActivity {
         btnproveedor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(MenuActivity.this,ProveedorActivity.class));
             }
         });
@@ -46,6 +46,7 @@ public class MenuActivity extends AppCompatActivity {
         btncategoria.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(MenuActivity.this,CategoriaActivity.class));
             }
         });

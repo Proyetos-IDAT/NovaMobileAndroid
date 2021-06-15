@@ -17,6 +17,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,16 +34,15 @@ public class ClienteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cliente);
-
         //agrega el list view buscando por su id
         listView=findViewById(R.id.listView);
-
         listarClientes();
         FloatingActionButton fab = findViewById(R.id.fab);
         FloatingActionButton fabregresar=findViewById(R.id.fabRegresar);
         fabregresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent=new Intent(ClienteActivity.this,MenuActivity.class);
                 startActivity(intent);
             }
