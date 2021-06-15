@@ -8,16 +8,15 @@
     tools:context=".CategoriaEdActivity">
 
     <LinearLayout
-        android:layout_width="328dp"
-        android:layout_height="538dp"
+        android:layout_width="349dp"
+        android:layout_height="321dp"
         android:orientation="vertical"
         android:padding="10px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.496">
+        app:layout_constraintTop_toBottomOf="@+id/txttitulocat"
+        app:layout_constraintVertical_bias="0.289">
 
         <TextView
             android:id="@+id/IdCategoria"
@@ -69,4 +68,18 @@
             android:text="@string/valVolver"
             app:backgroundTint="@color/black" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/txttitulocat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/ValCat"
+        android:textColor="#F6F6F6"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

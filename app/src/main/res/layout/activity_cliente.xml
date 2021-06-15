@@ -39,15 +39,27 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:backgroundTint="#38ef7d"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:backgroundTint="#7E4CD6"
+        app:srcCompat="@drawable/ic_baseline_add_circle_outline_24"
+        tools:ignore="VectorDrawableCompat" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabRegresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        app:backgroundTint="#38ef7d"
+        app:backgroundTint="#7E4CD6"
         app:srcCompat="@drawable/abc_vector_test" />
 
+    <TextView
+        android:id="@+id/txtTituloCli"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/valListCliente"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        android:textStyle="bold" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

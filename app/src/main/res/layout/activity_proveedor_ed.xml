@@ -8,14 +8,14 @@
     tools:context=".ProveedorEdActivity">
 
     <LinearLayout
-        android:layout_width="374dp"
-        android:layout_height="605dp"
+        android:layout_width="390dp"
+        android:layout_height="573dp"
         android:orientation="vertical"
         android:padding="10px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/txtTitProveedor">
 
         <TextView
             android:id="@+id/IdProve"
@@ -131,6 +131,20 @@
             app:backgroundTint="@color/black" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtTitProveedor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/ValProv"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
