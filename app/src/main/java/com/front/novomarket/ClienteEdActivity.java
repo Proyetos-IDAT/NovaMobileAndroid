@@ -103,6 +103,8 @@ public class ClienteEdActivity extends AppCompatActivity {
             public void onResponse(Call<Cliente> call, Response<Cliente> response) {
                 if(response!=null){
                     Toast.makeText(ClienteEdActivity.this,"Se agrego con éxito el cliente",Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(ClienteEdActivity.this,"Ocurrio un incoveniente",Toast.LENGTH_LONG).show();
                 }
             }
 
