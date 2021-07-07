@@ -60,6 +60,23 @@ public class ClienteEdActivity extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String nom= txtNombres.getText().toString().trim();
+                String ape= txtApellidos.getText().toString().trim();
+                String num= txtNumero.getText().toString().trim();
+                 if(nom.isEmpty()){
+                    txtNombres.setError("Nombre requerido");
+                    txtNombres.requestFocus();
+                    return;
+                } if(ape.isEmpty()){
+                    txtApellidos.setError("Apellido requerido");
+                    txtApellidos.requestFocus();
+                     return;
+                }if(num.isEmpty()) {
+                    txtNumero.setError("Numero requerido");
+                    txtNumero.requestFocus();
+                     return;
+                 }
+
                 Cliente c=new Cliente();
                 //hemos seteado los nombres y apellidos enviandolo al metodo llevando después al webservice
                 c.setNomcli(txtNombres.getText().toString());

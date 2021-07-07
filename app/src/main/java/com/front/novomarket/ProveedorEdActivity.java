@@ -64,6 +64,32 @@ public class ProveedorEdActivity extends AppCompatActivity {
         btnSavepro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String nompro= txtNomprove.getText().toString().trim();
+                String ruc= txtRuc.getText().toString().trim();
+                String contacto= txtNomcontacto.getText().toString().trim();
+                String direccion= txtDireccion.getText().toString().trim();
+                String telefono= txtTelefono.getText().toString().trim();
+                if (nompro.isEmpty()) {
+                    txtNomprove.setError("Nombre proveedor requerido");
+                    txtNomprove.requestFocus();
+                    return;
+                }if(ruc.isEmpty()) {
+                    txtRuc.setError("Ruc requerido");
+                    txtRuc.requestFocus();
+                    return;
+                }if(contacto.isEmpty()) {
+                    txtNomcontacto.setError("Nombre del contacto requerido");
+                    txtNomcontacto.requestFocus();
+                    return;
+                }if(direccion.isEmpty()) {
+                    txtDireccion.setError("Direccion requerido");
+                    txtDireccion.requestFocus();
+                    return;
+                }if(telefono.isEmpty()) {
+                    txtTelefono.setError("teléfono requerido");
+                    txtTelefono.requestFocus();
+                    return;
+                }
                 Proveedor pr=new Proveedor();
                 //hemos seteado los nombres y apellidos enviandolo al metodo llevando después al webservice
                 pr.setNomprove(txtNomprove.getText().toString());

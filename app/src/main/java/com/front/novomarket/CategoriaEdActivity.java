@@ -50,6 +50,14 @@ public class CategoriaEdActivity extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*validación de campo*/
+                String nomcat= txtNomCat.getText().toString().trim();
+                if (nomcat.isEmpty()) {
+                    txtNomCat.setError("Nombre de la categoria requerido");
+                    txtNomCat.requestFocus();
+                    return;
+                }
+
                 Categoria c=new Categoria();
                 //hemos seteado los nombres y apellidos enviandolo al metodo llevando después al webservice
                 c.setNomcat(txtNomCat.getText().toString());
@@ -58,6 +66,7 @@ public class CategoriaEdActivity extends AppCompatActivity {
                     addCategoria(c);
                     Intent intent =new Intent(CategoriaEdActivity.this,CategoriaActivity.class);
                     startActivity(intent);
+
                 }else{
                     //Si la condición no es guardar se va a actualizar los datos de persona llamandolo por su ai
                     //En el cual luego se va de modificar se va a ir al activitu main para poder ir a la ubicadción
@@ -85,6 +94,7 @@ public class CategoriaEdActivity extends AppCompatActivity {
         });
     }
     public void addCategoria(Categoria c){
+
         Call<Categoria> call= RetrofitClient.getInstance().getAPI().addCategoria(c);
         call.enqueue(new Callback<Categoria>() {
             @Override
@@ -96,11 +106,11 @@ public class CategoriaEdActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Categoria> call, Throwable t) {
-                Log.e("Error:",t.getMessage());
+                Toast.makeText(CategoriaEdActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
-        Intent intent=new Intent(CategoriaEdActivity.this,CategoriaActivity.class);
-        startActivity(intent);
+
+
     }
     public void updateCategoria(Categoria categoria, int id){
         Call<Categoria>call=RetrofitClient.getInstance().getAPI().updateCategoria(categoria,id);

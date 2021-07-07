@@ -49,6 +49,12 @@ public class MetodoPagoEdActivity extends AppCompatActivity {
         btnSavemetpag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String tipopago= txtTipopago.getText().toString().trim();
+                if (tipopago.isEmpty()) {
+                    txtTipopago.setError("Se requerie colocar el tipo de pago");
+                    txtTipopago.requestFocus();
+                    return;
+                }
                 MetodoPago mp=new MetodoPago();
                 //hemos seteado los nombres y apellidos enviandolo al metodo llevando después al webservice
                 mp.setTipopago(txtTipopago.getText().toString());
