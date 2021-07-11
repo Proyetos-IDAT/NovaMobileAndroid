@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NovoMarket"
         android:usesCleartextTraffic="true">
-        <activity android:name=".CategoriaEdActivity"></activity>
+        <activity android:name=".ProductosEdActivity"></activity>
+        <activity android:name=".ProductosActivity" />
+        <activity android:name=".CategoriaEdActivity" />
         <activity android:name=".CategoriaActivity" />
         <activity android:name=".MetodoPagoActivity" />
         <activity android:name=".MetodoPagoEdActivity" />

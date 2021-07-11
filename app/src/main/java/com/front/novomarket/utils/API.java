@@ -3,6 +3,7 @@ package com.front.novomarket.utils;
 import com.front.novomarket.model.Categoria;
 import com.front.novomarket.model.Cliente;
 import com.front.novomarket.model.MetodoPago;
+import com.front.novomarket.model.Producto;
 import com.front.novomarket.model.Proveedor;
 import com.front.novomarket.model.User;
 
@@ -79,5 +80,10 @@ public interface API {
     @POST("eliminarcat/{id}")
     Call<Categoria>deleteCategoria(@Path("id") int id);
     //---------------------------------------------------------
+
+    //------------Productos Services
+    @GET("productos/all")
+    Call<List<Producto>>getProducto();
+    //-------------------------------
 
 }

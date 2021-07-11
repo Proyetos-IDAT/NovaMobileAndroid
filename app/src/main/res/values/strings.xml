@@ -51,10 +51,12 @@
     <string name="valingr">Ingresar</string>
     <string name="valclienteman">Cliente</string>
     <string name="valListCate">Lista Categorias</string>
+    <string name="valListProductos">Lista de Productos</string>
     <string name="valListCliente">Lista de Clientes</string>
     <string name="valListProveedor">Lista Proveedores</string>
     <string name="valListMetodoPago">Lista Metodo de Pago</string>
     <string name="ValCat">Categorias</string>
+    <string name="valProductos">Productos</string>
     <string name="valMetPago">Metodo Pago</string>
     <string name="ValProv">Proveedores</string>
 </resources>

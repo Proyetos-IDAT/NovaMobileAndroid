@@ -13,44 +13,49 @@ import android.widget.Toast;
 
 
 public class MenuActivity extends AppCompatActivity {
-    Button btncliente,btnproveedor,btnmetodopago,btncategoria;
+    Button btncliente, btnproveedor, btnmetodopago, btncategoria, btnProductos;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         //String welcomeText = "Welcome " + getIntent().getStringExtra("username") + "!";
-        String welcomeText="Bienvenido";
+        String welcomeText = "Bienvenido";
         TextView tvWelcome = findViewById(R.id.tvWelcome);
         tvWelcome.setText(welcomeText);
-        btncliente=findViewById(R.id.btncliente);
-        btnproveedor=findViewById(R.id.btnproveedores);
-        btnmetodopago=findViewById(R.id.btnmetodopago);
-        btncategoria=findViewById(R.id.btncategoria);
+        btncliente = findViewById(R.id.btncliente);
+        btnproveedor = findViewById(R.id.btnproveedores);
+        btnmetodopago = findViewById(R.id.btnmetodopago);
+        btncategoria = findViewById(R.id.btncategoria);
+        btnProductos = findViewById(R.id.btnProductos);
         btncliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MenuActivity.this,ClienteActivity.class));
+                startActivity(new Intent(MenuActivity.this, ClienteActivity.class));
             }
         });
         btnproveedor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(MenuActivity.this,ProveedorActivity.class));
+                startActivity(new Intent(MenuActivity.this, ProveedorActivity.class));
             }
         });
         btnmetodopago.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MenuActivity.this,MetodoPagoActivity.class));
+                startActivity(new Intent(MenuActivity.this, MetodoPagoActivity.class));
             }
         });
         btncategoria.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(MenuActivity.this,CategoriaActivity.class));
+                startActivity(new Intent(MenuActivity.this, CategoriaActivity.class));
             }
+        });
+        btnProductos.setOnClickListener(v -> {
+            startActivity(new Intent(MenuActivity.this, ProductosActivity.class));
         });
         findViewById(R.id.btnCerrarSesion).setOnClickListener(new View.OnClickListener() {
             @Override

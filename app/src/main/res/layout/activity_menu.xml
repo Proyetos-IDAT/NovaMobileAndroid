@@ -79,7 +79,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btncategoria" />
+        app:layout_constraintTop_toBottomOf="@+id/btnProductos" />
 
     <Button
         android:id="@+id/btncliente"
@@ -138,4 +138,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnmetodopago" />
 
+    <Button
+        android:id="@+id/btnProductos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/valProductos"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/black"
+        app:icon="@drawable/ic_baseline_shopping_basket_24"
+        app:iconGravity="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btncategoria" />
 </androidx.constraintlayout.widget.ConstraintLayout>
