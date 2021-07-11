@@ -13,7 +13,8 @@ import android.widget.Toast;
 
 
 public class MenuActivity extends AppCompatActivity {
-    Button btncliente, btnproveedor, btnmetodopago, btncategoria, btnProductos;
+
+    Button btncliente, btnproveedor, btnmetodopago, btncategoria, btngenerarcomprobante, btnProductos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +24,19 @@ public class MenuActivity extends AppCompatActivity {
         String welcomeText = "Bienvenido";
         TextView tvWelcome = findViewById(R.id.tvWelcome);
         tvWelcome.setText(welcomeText);
+
         btncliente = findViewById(R.id.btncliente);
         btnproveedor = findViewById(R.id.btnproveedores);
         btnmetodopago = findViewById(R.id.btnmetodopago);
         btncategoria = findViewById(R.id.btncategoria);
+        btngenerarcomprobante = findViewById(R.id.btnGenerarComprobante);
         btnProductos = findViewById(R.id.btnProductos);
+        btngenerarcomprobante.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MenuActivity.this, GenerarComprobanteActivity.class));
+            }
+        });
         btncliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

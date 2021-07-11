@@ -1,7 +1,12 @@
 package com.front.novomarket.model;
 
+
+import com.google.gson.annotations.SerializedName;
+
 public class MetodoPago {
+    @SerializedName("idmetpago")
     private int idmetpago;
+    @SerializedName("tipopago")
     private String tipopago;
 
     public MetodoPago() {
@@ -26,5 +31,10 @@ public class MetodoPago {
 
     public void setTipopago(String tipopago) {
         this.tipopago = tipopago;
+    }
+
+    @Override
+    public String toString() {
+        return this.tipopago;
     }
 }

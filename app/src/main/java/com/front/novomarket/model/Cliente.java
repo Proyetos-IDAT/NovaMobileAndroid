@@ -1,18 +1,26 @@
 package com.front.novomarket.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Cliente {
+
+    @SerializedName("idcli")
     private int idcli;
-    private String apecli;
+    @SerializedName("nomcli")
     private String nomcli;
+    @SerializedName("apecli")
+    private String apecli;
+    @SerializedName("numcli")
     private String numcli;
 
     public Cliente(){
     }
 
-    public Cliente(int idcli, String apecli, String nomcli, String numcli) {
+    public Cliente(int idcli,  String nomcli, String apecli,String numcli) {
         this.idcli = idcli;
-        this.apecli = apecli;
         this.nomcli = nomcli;
+        this.apecli = apecli;
         this.numcli = numcli;
     }
 
@@ -24,14 +32,6 @@ public class Cliente {
         this.idcli = idcli;
     }
 
-    public String getApecli() {
-        return apecli;
-    }
-
-    public void setApecli(String apecli) {
-        this.apecli = apecli;
-    }
-
     public String getNomcli() {
         return nomcli;
     }
@@ -40,11 +40,26 @@ public class Cliente {
         this.nomcli = nomcli;
     }
 
+    public String getApecli() {
+        return apecli;
+    }
+
+    public void setApecli(String apecli) {
+        this.apecli = apecli;
+    }
+
+
+
     public String getNumcli() {
         return numcli;
     }
 
     public void setNumcli(String numcli) {
         this.numcli = numcli;
+    }
+
+    @Override
+    public String toString() {
+        return this.nomcli;
     }
 }

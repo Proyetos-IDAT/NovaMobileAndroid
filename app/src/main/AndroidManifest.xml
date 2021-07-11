@@ -14,6 +14,8 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".ProductosEdActivity"></activity>
         <activity android:name=".ProductosActivity" />
+        <activity android:name=".GenerarComprobanteActivity"></activity>
+        <activity android:name=".ComprobanteActivity" />
         <activity android:name=".CategoriaEdActivity" />
         <activity android:name=".CategoriaActivity" />
         <activity android:name=".MetodoPagoActivity" />

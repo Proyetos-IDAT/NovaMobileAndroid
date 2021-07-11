@@ -59,4 +59,5 @@
     <string name="valProductos">Productos</string>
     <string name="valMetPago">Metodo Pago</string>
     <string name="ValProv">Proveedores</string>
+    <string name="title_activity_comprobante">ComprobanteActivity</string>
 </resources>
