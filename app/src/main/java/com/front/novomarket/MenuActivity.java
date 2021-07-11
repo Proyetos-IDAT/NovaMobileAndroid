@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 
 public class MenuActivity extends AppCompatActivity {
-    Button btncliente,btnproveedor,btnmetodopago,btncategoria;
+    Button btncliente,btnproveedor,btnmetodopago,btncategoria,btncomprobante,btngenerarcomprobante;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +26,20 @@ public class MenuActivity extends AppCompatActivity {
         btnproveedor=findViewById(R.id.btnproveedores);
         btnmetodopago=findViewById(R.id.btnmetodopago);
         btncategoria=findViewById(R.id.btncategoria);
+        btncomprobante=findViewById(R.id.btnComprobante);
+        btngenerarcomprobante=findViewById(R.id.btnGenerarComprobante);
+        btngenerarcomprobante.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MenuActivity.this,GenerarComprobanteActivity.class));
+            }
+        });
+        btncomprobante.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MenuActivity.this,ComprobanteActivity.class));
+            }
+        });
         btncliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
