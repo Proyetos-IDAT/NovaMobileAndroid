@@ -1,13 +1,22 @@
 package com.front.novomarket.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Date;
 
 public class Producto {
+
+    @SerializedName("idprod")
     private int idprod;
+    @SerializedName("nomprod")
     private String nomprod;
+    @SerializedName("fechavenc")
     private Date fechavenc;
+    @SerializedName("precio")
     private Double precio;
+    @SerializedName("stock_min")
     private int stock_min;
+    @SerializedName("stock_act")
     private int stock_act;
 
 
@@ -66,5 +75,10 @@ public class Producto {
 
     public void setStock_act(int stock_act) {
         this.stock_act = stock_act;
+    }
+
+    @Override
+    public String toString(){
+        return this.nomprod;
     }
 }
