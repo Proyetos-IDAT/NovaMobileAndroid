@@ -49,6 +49,9 @@ public class ComprobanteAdapter extends RecyclerView.Adapter<ComprobanteAdapter.
         holder.tvcliente.setText("cliente:"+c.getClienteId());
         holder.tvproducto.setText("producto: "+c.getProductoId());
         holder.tvmetodopago.setText("metodopago: "+c.getMetodoPagoId());
+        holder.tvprecio.setText("precio:"+c.getPrecio());
+        holder.tvcantidad.setText("cantidad:"+c.getCantidad());
+        holder.tvtotal.setText("total"+(c.getCantidad()*c.getPrecio()));
     }
     
     
@@ -60,7 +63,7 @@ public class ComprobanteAdapter extends RecyclerView.Adapter<ComprobanteAdapter.
     public class ComprobanteViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
 
-        TextView tvId,tvfecha,tvcliente,tvproducto,tvmetodopago;
+        TextView tvId,tvfecha,tvcliente,tvproducto,tvmetodopago,tvprecio,tvcantidad,tvtotal;
         OnItemClickListener onItemClickListener;
 
         public ComprobanteViewHolder(@NonNull View itemView,OnItemClickListener onItemClickListener) {
@@ -72,6 +75,9 @@ public class ComprobanteAdapter extends RecyclerView.Adapter<ComprobanteAdapter.
             tvcliente=itemView.findViewById(R.id.tvcliente);
             tvproducto=itemView.findViewById(R.id.tvProducto);
             tvmetodopago=itemView.findViewById(R.id.tvmetodopago);
+            tvprecio=itemView.findViewById(R.id.tvprecio);
+            tvcantidad=itemView.findViewById(R.id.tvcantidad);
+            tvtotal=itemView.findViewById(R.id.tvtotal);
             itemView.setOnClickListener(this);
         }
 

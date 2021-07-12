@@ -9,13 +9,17 @@ public class ComprobantePago {
     private int clienteId;
     private int productoId;
     private int metodoPagoId;
+    private double precio;
+    private  int cantidad;
 
-    public ComprobantePago(long id, String fecha, int clienteId, int productoId, int metodoPagoId) {
+    public ComprobantePago(long id, String fecha, int clienteId, int productoId, int metodoPagoId,double precio,int cantidad) {
         this.id = id;
         this.fecha = fecha;
         this.clienteId = clienteId;
         this.productoId = productoId;
         this.metodoPagoId = metodoPagoId;
+        this.precio=precio;
+        this.cantidad=cantidad;
     }
 
     public long getId() {
@@ -54,8 +58,24 @@ public class ComprobantePago {
         return metodoPagoId;
     }
 
-    public void setMetodopagoId(int metodopagoId) {
+    public void setMetodoPagoId(int metodopagoId) {
         this.metodoPagoId = metodopagoId;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 
     @Override
@@ -66,6 +86,8 @@ public class ComprobantePago {
                 ", clienteId=" + clienteId +
                 ", productoId=" + productoId +
                 ", metodoPagoId=" + metodoPagoId +
+                ", precio=" + precio +
+                ", cantidad=" + cantidad +
                 '}';
     }
 }

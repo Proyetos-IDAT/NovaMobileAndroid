@@ -26,7 +26,7 @@ import retrofit2.Response;
 
 public class GenerarComprobanteActivity extends AppCompatActivity {
 
-    EditText etId, fechas;
+    EditText etId, fechas,etcantidad,etprecio;
     Spinner spinnerProductos, spinnerMetodoPago, spinnerCliente;
     public List<MetodoPago> metodoPagos;
     public List<Producto> productos;
@@ -42,6 +42,8 @@ public class GenerarComprobanteActivity extends AppCompatActivity {
         spinnerProductos = findViewById(R.id.etProducto);
         spinnerCliente = findViewById(R.id.etCliente);
         spinnerMetodoPago = findViewById(R.id.etMetodoPago);
+        etcantidad=findViewById(R.id.etcantidad);
+        etprecio=findViewById(R.id.etprecio);
 
 
         API api = RetrofitClient.getInstance().getAPI();
@@ -147,7 +149,10 @@ public class GenerarComprobanteActivity extends AppCompatActivity {
         int clienteId = ((Cliente) spinnerCliente.getSelectedItem()).getIdcli();
         int productoId = ((Producto) spinnerProductos.getSelectedItem()).getIdprod();
         int metodopagoId = ((MetodoPago) spinnerMetodoPago.getSelectedItem()).getIdmetpago();
-        Call<ResponseBody> call = RetrofitClient.getInstance().getAPI().GenerarComprobante(new ComprobantePago(id, fecha, clienteId, productoId, metodopagoId));
+        double precio=Double.parseDouble(etprecio.getText().toString());
+        int cantidad=Integer.parseInt(etcantidad.getText().toString());
+
+        Call<ResponseBody> call = RetrofitClient.getInstance().getAPI().GenerarComprobante(new ComprobantePago(id, fecha, clienteId, productoId, metodopagoId,precio,cantidad));
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
