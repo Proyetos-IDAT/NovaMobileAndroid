@@ -14,11 +14,13 @@
             android:id="@+id/tvId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="10dp"
+            android:layout_below="@+id/tvtitulo"
 
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="-1dp"
+            android:layout_marginLeft="-1dp"
+            android:layout_marginTop="12dp"
             android:text="text"
             android:textColor="#000"
             android:textSize="15sp" />
@@ -108,11 +110,42 @@
             android:id="@+id/tvtotal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tvprecio"
+            android:layout_below="@+id/tvIgv"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_marginTop="9dp"
+            android:layout_marginEnd="-3dp"
+            android:layout_marginRight="-3dp"
             android:text="text"
             android:textColor="#000"
             android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvIgv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvprecio"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:text="text"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvtitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="monospace"
+            android:text="TextView"
+            android:textAllCaps="false"
+            android:textColor="#FF9800"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

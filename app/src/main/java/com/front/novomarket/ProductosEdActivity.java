@@ -95,6 +95,7 @@ public class ProductosEdActivity extends AppCompatActivity {
         });
         btnsave.setOnClickListener(v -> {
             agregarProducto();
+            startActivity(new Intent(ProductosEdActivity.this, ProductosActivity.class));
         });
     }
 

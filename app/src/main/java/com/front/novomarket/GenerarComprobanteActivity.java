@@ -2,6 +2,7 @@ package com.front.novomarket;
 
 import   androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -123,6 +124,12 @@ public class GenerarComprobanteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 GenerarComprobante();
+            }
+        });
+        findViewById(R.id.btnvolverMenu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(GenerarComprobanteActivity.this,MenuActivity.class));
             }
         });
 

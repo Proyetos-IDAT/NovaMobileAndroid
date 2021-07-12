@@ -11,8 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Crear comprobante"
-        android:textColor="@color/design_default_color_primary_dark"
+        android:fontFamily="serif-monospace"
+        android:text="@string/valGenerarComprobante"
+        android:textAllCaps="true"
+        android:textColor="#FF9800"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,14 +80,14 @@
         android:id="@+id/btnAddProduct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="236dp"
-        android:text="Generar"
+        android:layout_marginTop="36dp"
 
+        android:text="Generar"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etMetodoPago" />
+        app:layout_constraintTop_toBottomOf="@+id/etprecio" />
 
     <TextView
         android:id="@+id/textView2"
@@ -138,4 +140,14 @@
         android:hint="Ingrese el precio"
         app:layout_constraintTop_toBottomOf="@+id/etcantidad"
         tools:layout_editor_absoluteX="91dp" />
+
+    <Button
+        android:id="@+id/btnvolverMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Volver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddProduct" />
 </androidx.constraintlayout.widget.ConstraintLayout>

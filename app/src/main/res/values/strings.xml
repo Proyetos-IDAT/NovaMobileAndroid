@@ -67,4 +67,7 @@
     <string name="txtHintStockMin">Stock Mínimo</string>
     <string name="txtHintCategoria">Categoria</string>
     <string name="txtHintProveedor">Proveedor</string>
+    <string name="Volver">Regresar</string>
+    <string name="valGenerarComprobante">Generar Comprobante</string>
+
 </resources>
