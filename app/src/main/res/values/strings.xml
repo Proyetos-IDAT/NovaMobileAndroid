@@ -60,4 +60,6 @@
     <string name="valMetPago">Metodo Pago</string>
     <string name="ValProv">Proveedores</string>
     <string name="title_activity_comprobante">ComprobanteActivity</string>
+    <string name="Volver">Regresar</string>
+    <string name="valGenerarComprobante">Generar Comprobante</string>
 </resources>
