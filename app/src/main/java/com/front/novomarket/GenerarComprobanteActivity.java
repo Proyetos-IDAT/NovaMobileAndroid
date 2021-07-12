@@ -1,6 +1,6 @@
 package com.front.novomarket;
 
-import androidx.appcompat.app.AppCompatActivity;
+import   androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -17,7 +17,6 @@ import com.front.novomarket.model.Producto;
 import com.front.novomarket.utils.API;
 import com.front.novomarket.utils.RetrofitClient;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import okhttp3.ResponseBody;
@@ -128,20 +127,33 @@ public class GenerarComprobanteActivity extends AppCompatActivity {
     }
 
     private void GenerarComprobante() {
+        //validaciones de campos
+        String valid=etId.getText().toString().trim();
+        String valfech=fechas.getText().toString().trim();
+        if(valid.isEmpty()){
+            etId.setError("Id requerido para el comprobante");
+            etId.requestFocus();
+            return;
+        }
+        if(valfech.isEmpty()){
+            fechas.setError("fecha requerida");
+            fechas.requestFocus();
+            return;
+        }
 
+        //llamada retrofit el cual va a traer relaciones
         long id = Long.parseLong(etId.getText().toString().trim());
-        String fecha = fechas.getText().toString().trim();
+        String fecha = fechas.getText().toString();
         int clienteId = ((Cliente) spinnerCliente.getSelectedItem()).getIdcli();
         int productoId = ((Producto) spinnerProductos.getSelectedItem()).getIdprod();
         int metodopagoId = ((MetodoPago) spinnerMetodoPago.getSelectedItem()).getIdmetpago();
-        /*Call<List<MetodoPago>>call1=RetrofitClient.getInstance().getAPI().getMetodoPago();*/
         Call<ResponseBody> call = RetrofitClient.getInstance().getAPI().GenerarComprobante(new ComprobantePago(id, fecha, clienteId, productoId, metodopagoId));
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 try {
                     String test = response.body().string();
-                    Toast.makeText(GenerarComprobanteActivity.this, "Se agrego con exito", Toast.LENGTH_LONG).show();
+                    Toast.makeText(GenerarComprobanteActivity.this, "Se creo el comprobante", Toast.LENGTH_LONG).show();
                 } catch (Exception e) {
                     Toast.makeText(GenerarComprobanteActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                 }

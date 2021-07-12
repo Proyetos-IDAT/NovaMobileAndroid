@@ -80,12 +80,11 @@ public interface API {
 
     @POST("eliminarcat/{id}")
     Call<Categoria>deleteCategoria(@Path("id") int id);
-    //---------------------------------------------------------
-
+    //---------------------------------------------------------Productos
     @GET("productos/all")
     Call<List<Producto>>getProducto();
 
-    //comprobante
+    //-----------------Comprobante Service
     @GET("listarcompro")
     Call<List<ComprobantePago>>getComprobante();
     @POST("agregarcompro")
