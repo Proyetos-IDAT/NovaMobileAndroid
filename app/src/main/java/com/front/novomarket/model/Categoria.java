@@ -27,4 +27,9 @@ public class Categoria {
     public void setNomcat(String nomcat) {
         this.nomcat = nomcat;
     }
+
+    @Override
+    public String toString() {
+        return this.nomcat;
+    }
 }

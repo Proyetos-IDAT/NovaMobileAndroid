@@ -2,7 +2,7 @@ package com.front.novomarket.utils;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClient {
-    private static final String BASE_URL = "http://192.168.1.15:5050/api/";
+    private static final String BASE_URL = "http://192.168.0.15:5050/api/";
     private static RetrofitClient mInstance;
     private Retrofit retrofit;
 

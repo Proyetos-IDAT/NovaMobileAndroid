@@ -34,7 +34,6 @@
     <string name="valLCliente">Lista de Clientes</string>
     <string name="valCerrarSe">Cerrar Sesión</string>
     <string name="title_activity_proveedor">ProveedorActivity</string>
-    <string name="Proveedores">valproveedores</string>
     <string name="valproveedores">Proveedores</string>
     <string name="validProveedor">Id Proveedor</string>
     <string name="validNomprove">Nombre del Proveedor</string>
@@ -60,4 +59,12 @@
     <string name="valMetPago">Metodo Pago</string>
     <string name="ValProv">Proveedores</string>
     <string name="title_activity_comprobante">ComprobanteActivity</string>
+    <string name="txtValRegProducto">Productos</string>
+    <string name="txtHintNomProd">Nombre del producto</string>
+    <string name="txtHintPrecioProd">Precio</string>
+    <string name="txtHintFechaVenc">Fecha de vencimiento</string>
+    <string name="txtHintStkActual">Stock Acutal</string>
+    <string name="txtHintStockMin">Stock Mínimo</string>
+    <string name="txtHintCategoria">Categoria</string>
+    <string name="txtHintProveedor">Proveedor</string>
 </resources>

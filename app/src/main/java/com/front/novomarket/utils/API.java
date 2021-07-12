@@ -6,6 +6,7 @@ import com.front.novomarket.model.ComprobantePago;
 import com.front.novomarket.model.MetodoPago;
 import com.front.novomarket.model.Producto;
 import com.front.novomarket.model.Proveedor;
+import com.front.novomarket.model.Request.ProductoRequest;
 import com.front.novomarket.model.User;
 
 import java.util.List;
@@ -83,6 +84,8 @@ public interface API {
     //---------------------------------------------------------Productos
     @GET("productos/all")
     Call<List<Producto>>getProducto();
+    @POST("productos")
+    Call<Producto>RegistrarProducto(@Body ProductoRequest p);
 
     //-----------------Comprobante Service
     @GET("listarcompro")
