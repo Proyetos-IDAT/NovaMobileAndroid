@@ -53,7 +53,7 @@ public class ProductoAdapter extends ArrayAdapter<Producto> {
         txtFechaVenc.setText("Fecha de vencimiento: "+dateFormat.format(fechavenc));
 
         //Imagen
-        Glide.with(context).load("http://192.168.0.15:5050/api/productos/foto/"+productos.get(position)
+        Glide.with(context).load("http://192.168.1.15:5050/api/productos/foto/"+productos.get(position)
                 .getIdprod())
                 .into(ivProd);
         return rowView;

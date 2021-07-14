@@ -44,8 +44,8 @@ public class ClienteEdActivity extends AppCompatActivity {
         //Estamos obteniendo los valores de una fila
         Bundle bundle = getIntent().getExtras();
         String id = bundle.getString("ID");
-        String ape = bundle.getString("NOMBRE");
-        String nom = bundle.getString("APELLIDOS");
+        String ape = bundle.getString("APELLIDOS");
+        String nom = bundle.getString("NOMBRE");
         String num = bundle.getString("NUMERO");
 
         txtId.setText(id);

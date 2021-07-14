@@ -5,25 +5,30 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.front.novomarket.common.Constantes;
+import com.front.novomarket.common.SharedPreferencesManager;
+
 
 public class MenuActivity extends AppCompatActivity {
 
     Button btncliente, btnproveedor, btnmetodopago, btncategoria, btngenerarcomprobante, btnProductos,btnComprobante;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        //String welcomeText = "Welcome " + getIntent().getStringExtra("username") + "!";
-        String welcomeText = "Bienvenido";
-        TextView tvWelcome = findViewById(R.id.tvWelcome);
-        tvWelcome.setText(welcomeText);
+
+            String welcomeText =  "Bienvenido";
+            TextView tvWelcome = findViewById(R.id.tvWelcome);
+            tvWelcome.setText(welcomeText);
 
         btncliente = findViewById(R.id.btncliente);
         btnproveedor = findViewById(R.id.btnproveedores);

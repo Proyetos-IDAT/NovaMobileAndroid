@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
+
 import com.front.novomarket.model.User;
 import com.front.novomarket.utils.RetrofitClient;
 
@@ -21,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText etUsername, etPassword;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,11 +32,13 @@ public class LoginActivity extends AppCompatActivity {
         etUsername = findViewById(R.id.etUserName);
         etPassword = findViewById(R.id.etPassword);
 
+
         findViewById(R.id.btnLogin).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 loginUser();
             }
+
         });
 
         findViewById(R.id.tvRegisterLink).setOnClickListener(new View.OnClickListener() {
@@ -42,7 +47,11 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
             }
         });
+
     }
+
+
+
 
     private void loginUser() {
         final String userName = etUsername.getText().toString().trim();
@@ -69,13 +78,15 @@ public class LoginActivity extends AppCompatActivity {
                 String s = "";
                 try {
                     s = response.body().string();
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 if (s.equals(userName)) {
+
                     Toast.makeText(LoginActivity.this, "Usuario logeado", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(LoginActivity.this, MenuActivity.class).putExtra("username", userName));
+                    startActivity(new Intent(LoginActivity.this, MenuActivity.class));
                 } else {
                     Toast.makeText(LoginActivity.this, "Error en los datos ingresados", Toast.LENGTH_LONG).show();
                 }

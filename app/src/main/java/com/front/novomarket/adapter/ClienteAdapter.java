@@ -42,7 +42,7 @@ public class ClienteAdapter extends ArrayAdapter<Cliente> {
         txtApellidos.setText(String.format("APELLIDO: %s", clientes.get(position).getApecli()));
         txtNumero.setText(String.format("NUMERO: %s", clientes.get(position).getNumcli()));
 
-        //aqui se va a poner cuando el usuario presiona en una de las filas va a po
+        //aqui se va a poder el usuario realizar las modificaciones
         rowView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

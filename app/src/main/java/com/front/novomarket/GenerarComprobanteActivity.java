@@ -1,12 +1,18 @@
 package com.front.novomarket;
 
 import   androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
+import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -18,7 +24,9 @@ import com.front.novomarket.model.Producto;
 import com.front.novomarket.utils.API;
 import com.front.novomarket.utils.RetrofitClient;
 
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -33,6 +41,7 @@ public class GenerarComprobanteActivity extends AppCompatActivity {
     public List<Producto> productos;
     public List<Cliente> clientes;
 
+    DatePickerDialog.OnDateSetListener setListener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +55,30 @@ public class GenerarComprobanteActivity extends AppCompatActivity {
         etcantidad=findViewById(R.id.etcantidad);
         etprecio=findViewById(R.id.etprecio);
 
+        final Calendar calendario = Calendar.getInstance();
+        int year = calendario.get(Calendar.YEAR);
+        int month = calendario.get(Calendar.MONTH);
+        int day = calendario.get(Calendar.DAY_OF_MONTH);
+
+        fechas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatePickerDialog datePickerDialog=new DatePickerDialog(
+                        GenerarComprobanteActivity.this, android.R.style.Theme_Holo_Light_Dialog,setListener,year,month,day
+                );
+                datePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                datePickerDialog.show();
+            }
+        });
+        setListener=new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+
+                month=month+1;
+                String date=String.format(Locale.getDefault(),"%02d-%02d-%02d",year,month,dayOfMonth);
+                fechas.setText(date);
+            }
+        };
 
         API api = RetrofitClient.getInstance().getAPI();
         Call<List<Cliente>> call = api.getCliente();
@@ -134,6 +167,8 @@ public class GenerarComprobanteActivity extends AppCompatActivity {
         });
 
     }
+
+
 
     private void GenerarComprobante() {
         //validaciones de campos
