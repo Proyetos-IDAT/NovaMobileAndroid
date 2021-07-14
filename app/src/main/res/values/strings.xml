@@ -69,5 +69,6 @@
     <string name="txtHintProveedor">Proveedor</string>
     <string name="Volver">Regresar</string>
     <string name="valGenerarComprobante">Generar Comprobante</string>
+    <string name="valFoto">Url de foto</string>
 
 </resources>

@@ -11,16 +11,18 @@ public class ProductoRequest {
     private Double precio;
     private int stock_min;
     private int stock_act;
+    private String foto;
     private Categoria categoria;
     private Proveedor proveedor;
 
     public ProductoRequest(String nomprod, String fechavenc, Double precio, int stock_min,
-                           int stock_act, Categoria categoria, Proveedor proveedor) {
+                           int stock_act, String foto, Categoria categoria, Proveedor proveedor) {
         this.nomprod = nomprod;
         this.fechavenc = fechavenc;
         this.precio = precio;
         this.stock_min = stock_min;
         this.stock_act = stock_act;
+        this.foto = foto;
         this.categoria = categoria;
         this.proveedor = proveedor;
     }

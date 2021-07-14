@@ -18,6 +18,8 @@ public class Producto {
     private int stock_min;
     @SerializedName("stock_act")
     private int stock_act;
+    @SerializedName("foto")
+    private String foto;
 
 
     public Producto(int idprod, String nomprod, Date fechavenc, Double precio, int stock_min,
@@ -78,8 +80,12 @@ public class Producto {
         this.stock_act = stock_act;
     }
 
+    public void setFoto(String foto) { this.foto = foto; }
+
+    public String getFoto() { return foto; }
+
     @Override
-    public String toString(){
+    public String toString() {
         return this.nomprod;
     }
 }

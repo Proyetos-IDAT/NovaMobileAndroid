@@ -25,7 +25,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ProductosEdActivity extends AppCompatActivity {
-    EditText etnom, etfechavenc, etprecio, etstock_min, etstock_act;
+    EditText etnom, etfechavenc, etprecio, etstock_min, etstock_act, etfoto;
     List<Categoria> categorias;
     List<Proveedor> proveedores;
     Spinner spinnerCat, spinnerProv;
@@ -40,6 +40,7 @@ public class ProductosEdActivity extends AppCompatActivity {
         etprecio = findViewById(R.id.etPrecProd);
         etstock_act = findViewById(R.id.etStockAct);
         etstock_min = findViewById(R.id.etStockMin);
+        etfoto = findViewById(R.id.etFoto);
         Button btnsave = findViewById(R.id.btnProdSave);
         Button btnRegresar = findViewById(R.id.btnProdVolver);
         Button btnEliminar = findViewById(R.id.btnProdEliminar);
@@ -104,6 +105,7 @@ public class ProductosEdActivity extends AppCompatActivity {
         int idcat = ((Categoria) spinnerCat.getSelectedItem()).getIdcat();
         String nombre = etnom.getText().toString();
         String fechav = etfechavenc.getText().toString();
+        String foto = etfoto.getText().toString();
         Double precio = Double.parseDouble(etprecio.getText().toString());
         int stock_act = Integer.parseInt(etstock_act.getText().toString());
         int stock_min = Integer.parseInt(etstock_min.getText().toString());
@@ -112,12 +114,12 @@ public class ProductosEdActivity extends AppCompatActivity {
         Proveedor provReque = new Proveedor(idprov, null, null,
                 null, null, null);
         ProductoRequest pr = new ProductoRequest(nombre, fechav, precio
-                , stock_act, stock_min, catReque, provReque);
+                , stock_act, stock_min, foto, catReque, provReque);
         Call<Producto> call = RetrofitClient.getInstance().getAPI().RegistrarProducto(pr);
         call.enqueue(new Callback<Producto>() {
             @Override
             public void onResponse(Call<Producto> call, Response<Producto> response) {
-                Toast.makeText(ProductosEdActivity.this,"prod registrado", Toast.LENGTH_LONG).show();
+                Toast.makeText(ProductosEdActivity.this, "prod registrado", Toast.LENGTH_LONG).show();
             }
 
             @Override
