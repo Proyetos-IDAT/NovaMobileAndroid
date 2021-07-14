@@ -20,7 +20,8 @@ public class Producto {
     private int stock_act;
 
 
-    public Producto(int idprod, String nomprod, Date fechavenc, Double precio, int stock_min, int stock_act) {
+    public Producto(int idprod, String nomprod, Date fechavenc, Double precio, int stock_min,
+                    int stock_act) {
         this.idprod = idprod;
         this.nomprod = nomprod;
         this.fechavenc = fechavenc;

@@ -9,7 +9,7 @@ public class Proveedor {
     private String direccion;
     private String telefono;
 
-    public Proveedor(){
+    public Proveedor() {
     }
 
     public Proveedor(int idprove, String nomprove, String ruc, String nomcontacto, String direccion, String telefono) {
@@ -67,5 +67,10 @@ public class Proveedor {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    @Override
+    public String toString() {
+        return this.nomprove;
     }
 }
