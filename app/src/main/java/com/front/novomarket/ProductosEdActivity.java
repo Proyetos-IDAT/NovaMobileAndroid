@@ -122,11 +122,51 @@ public class ProductosEdActivity extends AppCompatActivity {
         });
         btnsave.setOnClickListener(v -> {
             agregarProducto();
-            startActivity(new Intent(ProductosEdActivity.this, ProductosActivity.class));
         });
     }
 
     public void agregarProducto() {
+
+        String n= etnom.getText().toString();
+        String fechavalid = etfechavenc.getText().toString();
+        String fotovalid=etfoto.getText().toString();
+        String preciovalid = etprecio.getText().toString();
+        String stockminvalid = etstock_min.getText().toString();
+        String stockactvalid = etstock_act.getText().toString();
+
+        if (n.isEmpty()) {
+            etnom.setError("Nombre del producto requerido");
+            etnom.requestFocus();
+            return;
+        }if (preciovalid.isEmpty()){
+            etprecio.setError("Precio del producto requerido");
+            etprecio.requestFocus();
+            return;
+        }if(fotovalid.isEmpty()){
+            etfoto.getText().toString();
+            etfoto.getText().toString();
+        }
+        if (fechavalid.isEmpty()) {
+            etfechavenc.setError("Fecha de vencimiento del producto requerido");
+            etfechavenc.requestFocus();
+            return;
+        }if (stockminvalid.isEmpty()){
+            etstock_min.setError("Stock mínimo del producto requerido");
+            etstock_min.requestFocus();
+            return;
+        }if (stockactvalid.isEmpty()){
+            etstock_act.setError("Stock mínimo del producto requerido");
+            etstock_act.requestFocus();
+            return;
+        }
+        //validación de numero
+        if(n.contains("0") || n.contains("1") || n.contains("2") || n.contains("3") ||
+                n.contains("4") || n.contains("5") || n.contains("6") || n.contains("7") || n.contains("8") || n.contains("9")){
+            etnom.setError("El nombre del producto no puede contener números");
+            etnom.requestFocus();
+            return;
+        }
+
         int idprov = ((Proveedor) spinnerProv.getSelectedItem()).getIdprove();
         int idcat = ((Categoria) spinnerCat.getSelectedItem()).getIdcat();
         String nombre = etnom.getText().toString();
@@ -146,6 +186,7 @@ public class ProductosEdActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Producto> call, Response<Producto> response) {
                 Toast.makeText(ProductosEdActivity.this, "prod registrado", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(ProductosEdActivity.this, ProductosActivity.class));
             }
 
             @Override

@@ -58,6 +58,14 @@ public class CategoriaEdActivity extends AppCompatActivity {
                     return;
                 }
 
+                if(nomcat.contains("0") || nomcat.contains("1") || nomcat.contains("2") || nomcat.contains("3") ||
+                        nomcat.contains("4") || nomcat.contains("5") || nomcat.contains("6") ||
+                        nomcat.contains("7") || nomcat.contains("8") || nomcat.contains("9")){
+                    txtNomCat.setError("El nombre de la categoria no puede contener números");
+                    txtNomCat.requestFocus();
+                    return;
+                }
+
                 Categoria c=new Categoria();
                 //hemos seteado los nombres y apellidos enviandolo al metodo llevando después al webservice
                 c.setNomcat(txtNomCat.getText().toString());

@@ -54,6 +54,13 @@ public class MetodoPagoEdActivity extends AppCompatActivity {
                     txtTipopago.setError("Se requerie colocar el tipo de pago");
                     txtTipopago.requestFocus();
                     return;
+                }if(tipopago.contains("0") || tipopago.contains("1") ||
+                        tipopago.contains("2") || tipopago.contains("3") || tipopago.contains("4") ||
+                        tipopago.contains("5") || tipopago.contains("6") || tipopago.contains("7") || tipopago.contains("8") ||
+                        tipopago.contains("9")){
+                    txtTipopago.setError("El tipo de pago no puede contener números");
+                    txtTipopago.requestFocus();
+                    return;
                 }
                 MetodoPago mp=new MetodoPago();
                 //hemos seteado los nombres y apellidos enviandolo al metodo llevando después al webservice

@@ -90,6 +90,33 @@ public class ProveedorEdActivity extends AppCompatActivity {
                     txtTelefono.requestFocus();
                     return;
                 }
+                //length para los espacios requeridos
+                if(telefono.length() != 9){
+                    txtTelefono.setError("El número de teléfono debe poseer 9 digitos");
+                    txtTelefono.requestFocus();
+                    return;
+                }if(ruc.length() != 8) {
+                    txtRuc.setError("El Ruc debe poseer 8 digitos");
+                    txtRuc.requestFocus();
+                    return;
+                }
+                /////////////////////////////////////////no ingresar números
+                if(nompro.contains("0") || nompro.contains("1") || nompro.contains("2") || nompro.contains("3") ||
+                        nompro.contains("4") || nompro.contains("5") || nompro.contains("6") || nompro.contains("7") ||
+                        nompro.contains("8") || nompro.contains("9")){
+                    txtNomprove.setError("El nombre del proveedor no puede contener números");
+                    txtNomprove.requestFocus();
+                    return;
+                }if(contacto.contains("0") || contacto.contains("1") || contacto.contains("2") || contacto.contains("3") || contacto.contains("4") || contacto.contains("5") || contacto.contains("6") || contacto.contains("7") || contacto.contains("8") || contacto.contains("9")){
+                    txtNomcontacto.setError("El nombre del contacto del proveedor no puede contener números");
+                    txtNomcontacto.requestFocus();
+                    return;
+                }
+                //////////////////////////////////////////////////////////
+
+
+
+
                 Proveedor pr=new Proveedor();
                 //hemos seteado los nombres y apellidos enviandolo al metodo llevando después al webservice
                 pr.setNomprove(txtNomprove.getText().toString());

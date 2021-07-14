@@ -174,6 +174,8 @@ public class GenerarComprobanteActivity extends AppCompatActivity {
         //validaciones de campos
         String valid=etId.getText().toString().trim();
         String valfech=fechas.getText().toString().trim();
+        String valpre=etprecio.getText().toString().trim();
+        String valcant=etcantidad.getText().toString().trim();
         if(valid.isEmpty()){
             etId.setError("Id requerido para el comprobante");
             etId.requestFocus();
@@ -183,7 +185,21 @@ public class GenerarComprobanteActivity extends AppCompatActivity {
             fechas.setError("fecha requerida");
             fechas.requestFocus();
             return;
+        }if(valcant.isEmpty()){
+            etcantidad.setError("Cantidad requerida");
+            etcantidad.requestFocus();
+            return;
+        }if(valpre.isEmpty()){
+            etprecio.setError(("Precio requerido"));
+            etprecio.requestFocus();
+            return;
+        }if(valcant.isEmpty()) {
+            etcantidad.setError("Cantidad requerida");
+            etcantidad.requestFocus();
+            return;
         }
+         //falta validar la cantidad que no sea mayor a 100
+        //validad también el precio
 
         //llamada retrofit el cual va a traer relaciones
         long id = Long.parseLong(etId.getText().toString().trim());
@@ -213,6 +229,7 @@ public class GenerarComprobanteActivity extends AppCompatActivity {
         });
         etId.getText().clear();
         fechas.getText().clear();
-
+        etprecio.getText().clear();
+        etcantidad.getText().clear();
     }
 }

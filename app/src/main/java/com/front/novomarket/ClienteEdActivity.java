@@ -75,7 +75,23 @@ public class ClienteEdActivity extends AppCompatActivity {
                     txtNumero.setError("Numero requerido");
                     txtNumero.requestFocus();
                      return;
-                 }
+                 }if(num.length()!=9){
+                    txtNumero.setError("El número de teléfono del cliente debe tener 9 digitos");
+                    txtNumero.requestFocus();
+                    return;
+                }if(nom.contains("0") || nom.contains("1") || nom.contains("2") || nom.contains("3")
+                        || nom.contains("4") || nom.contains("5") || nom.contains("6") || nom.contains("7") ||
+                        nom.contains("8") || nom.contains("9")){
+                    txtNombres.setError("El nombre del cliente no puede contener números");
+                    txtNombres.requestFocus();
+                    return;
+                }if(ape.contains("0") || ape.contains("1") || ape.contains("2") || ape.contains("3") ||
+                        ape.contains("4") || ape.contains("5") || ape.contains("6") || ape.contains("7") ||
+                        ape.contains("8") || ape.contains("9")){
+                    txtApellidos.setError("El apellido del cliente no puede contener números");
+                    txtApellidos.requestFocus();
+                    return;
+                }
 
                 Cliente c=new Cliente();
                 //hemos seteado los nombres y apellidos enviandolo al metodo llevando después al webservice
