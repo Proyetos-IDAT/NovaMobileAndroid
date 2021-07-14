@@ -2,10 +2,14 @@ package com.front.novomarket;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -17,7 +21,9 @@ import com.front.novomarket.model.Request.ProductoRequest;
 import com.front.novomarket.utils.API;
 import com.front.novomarket.utils.RetrofitClient;
 
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -30,6 +36,7 @@ public class ProductosEdActivity extends AppCompatActivity {
     List<Proveedor> proveedores;
     Spinner spinnerCat, spinnerProv;
 
+    DatePickerDialog.OnDateSetListener setListener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,10 +50,29 @@ public class ProductosEdActivity extends AppCompatActivity {
         etfoto = findViewById(R.id.etFoto);
         Button btnsave = findViewById(R.id.btnProdSave);
         Button btnRegresar = findViewById(R.id.btnProdVolver);
-        Button btnEliminar = findViewById(R.id.btnProdEliminar);
         spinnerCat = findViewById(R.id.spnCategorias);
         spinnerProv = findViewById(R.id.spnProveedores);
 
+        final Calendar calendario = Calendar.getInstance();
+        int year = calendario.get(Calendar.YEAR);
+        int month = calendario.get(Calendar.MONTH);
+        int day = calendario.get(Calendar.DAY_OF_MONTH);
+
+        etfechavenc.setOnClickListener(v -> {
+            DatePickerDialog datePickerDialog=new DatePickerDialog(
+                    ProductosEdActivity.this, android.R.style.Theme_Holo_Light_Dialog,setListener,year,month,day
+            );
+            datePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            datePickerDialog.show();
+        });
+        setListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                month=month+1;
+                String date=String.format(Locale.getDefault(),"%02d-%02d-%02d",year,month,dayOfMonth);
+                etfechavenc.setText(date);
+            }
+        };
 
         API api = RetrofitClient.getInstance().getAPI();
 

@@ -170,12 +170,6 @@
             android:text="@string/valGuardar" />
 
         <Button
-            android:id="@+id/btnProdEliminar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/valEliminar" />
-
-        <Button
             android:id="@+id/btnProdVolver"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
