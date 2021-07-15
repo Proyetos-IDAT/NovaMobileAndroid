@@ -86,6 +86,6 @@ public class RegisterActivity extends AppCompatActivity {
                 Toast.makeText(RegisterActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
-
     }
+
 }

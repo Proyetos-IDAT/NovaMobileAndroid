@@ -10,7 +10,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-
+import com.front.novomarket.common.Constante;
+import com.front.novomarket.common.SharedPreferencesManager;
 import com.front.novomarket.model.User;
 import com.front.novomarket.utils.RetrofitClient;
 
@@ -36,10 +37,12 @@ public class LoginActivity extends AppCompatActivity {
         findViewById(R.id.btnLogin).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 loginUser();
             }
 
         });
+        validarDatos();
 
         findViewById(R.id.tvRegisterLink).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +53,11 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-
+    private void validarDatos() {
+        if (!SharedPreferencesManager.getSomeStringValue(Constante.PREF_USERNAME).equals("")) {
+            startActivity(new Intent(LoginActivity.this, MenuActivity.class));
+        }
+    }
 
 
     private void loginUser() {
@@ -82,10 +89,10 @@ public class LoginActivity extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
                 if (s.equals(userName)) {
-
+                    SharedPreferencesManager.setSomeStringValue(Constante.PREF_USERNAME,userName);
                     Toast.makeText(LoginActivity.this, "Usuario logeado", Toast.LENGTH_LONG).show();
+
                     startActivity(new Intent(LoginActivity.this, MenuActivity.class));
                 } else {
                     Toast.makeText(LoginActivity.this, "Error en los datos ingresados", Toast.LENGTH_LONG).show();
@@ -98,6 +105,5 @@ public class LoginActivity extends AppCompatActivity {
                 //Log.i("errorRetrofit",t.getMessage());
             }
         });
-
     }
 }

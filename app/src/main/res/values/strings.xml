@@ -63,7 +63,7 @@
     <string name="txtHintNomProd">Nombre del producto</string>
     <string name="txtHintPrecioProd">Precio</string>
     <string name="txtHintFechaVenc">Fecha de vencimiento</string>
-    <string name="txtHintStkActual">Stock Acutal</string>
+    <string name="txtHintStkActual">Stock Actual</string>
     <string name="txtHintStockMin">Stock Mínimo</string>
     <string name="txtHintCategoria">Categoria</string>
     <string name="txtHintProveedor">Proveedor</string>

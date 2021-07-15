@@ -1,6 +1,6 @@
 package com.front.novomarket.model;
 
-import com.google.gson.annotations.SerializedName;
+import  com.google.gson.annotations.SerializedName;
 
 import java.util.Date;
 

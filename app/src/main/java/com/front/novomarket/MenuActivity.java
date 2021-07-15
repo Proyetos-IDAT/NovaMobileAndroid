@@ -5,13 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.front.novomarket.common.Constante;
+import com.front.novomarket.common.SharedPreferencesManager;
 
 
 public class MenuActivity extends AppCompatActivity {
@@ -24,9 +25,9 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-            String welcomeText =  "Bienvenido";
-            TextView tvWelcome = findViewById(R.id.tvWelcome);
-            tvWelcome.setText(welcomeText);
+        String welcomeText =  "Bienvenido usuario: "+ SharedPreferencesManager.getSomeStringValue(Constante.PREF_USERNAME);
+        TextView tvWelcome = findViewById(R.id.tvWelcome);
+        tvWelcome.setText(welcomeText);
 
         btncliente = findViewById(R.id.btncliente);
         btnproveedor = findViewById(R.id.btnproveedores);
@@ -82,22 +83,27 @@ public class MenuActivity extends AppCompatActivity {
         findViewById(R.id.btnCerrarSesion).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MenuActivity.this);
-                builder.setTitle("Cerrar Sesión");
-                builder.setMessage("Estás seguro de cerrar sesión?").setPositiveButton("Sí", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        finishAffinity();
-                    }
-                }).setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                }).show();
-                /*startActivity(new Intent(MenuActivity.this,LoginActivity.class));
-                Toast.makeText(MenuActivity.this,"Finalizó sesión",Toast.LENGTH_SHORT).show();*/
+                mostrarCerrarSesion();
             }
         });
+
     }
+
+    private void mostrarCerrarSesion() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MenuActivity.this);
+        builder.setTitle("Cerrar Sesión");
+        builder.setMessage("Estás seguro de cerrar sesión?").setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                SharedPreferencesManager.setSomeStringValue(Constante.PREF_USERNAME, null);
+                finishAffinity();
+            }
+        }).setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        }).show();
+    }
+
 }
