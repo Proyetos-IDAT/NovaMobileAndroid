@@ -49,7 +49,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.227"
+        app:layout_constraintVertical_bias="0.213"
         app:lottie_autoPlay="true"
         app:lottie_fileName="menu.json"
         app:lottie_loop="true" />
@@ -58,127 +58,143 @@
         android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="60dp"
 
         android:text="@string/valtexto"
-        android:textSize="30sp"
+        android:textColor="#040202"
+        android:textSize="28sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
 
-    <Button
-        android:id="@+id/btncliente"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="@string/valcliente"
-        app:backgroundTint="@color/black"
-        app:icon="@drawable/ic_baseline_person_24"
-        app:iconGravity="textStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
-
-    <Button
-        android:id="@+id/btnproveedores"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:text="@string/valproveedores"
-        app:backgroundTint="@color/black"
-        app:icon="@drawable/ic_baseline_directions_bus_24"
-        app:iconGravity="textStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btncliente" />
-
-    <Button
-        android:id="@+id/btnmetodopago"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:text="@string/valmetodopago"
-        app:backgroundTint="@color/black"
-        app:icon="@drawable/ic_baseline_payment_24"
-        app:iconGravity="textStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnproveedores" />
-
-    <Button
-        android:id="@+id/btncategoria"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:text="@string/valcategoria"
-        android:textColor="@color/white"
-        app:backgroundTint="@color/black"
-        app:icon="@drawable/ic_baseline_category_24"
-        app:iconGravity="textStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnmetodopago" />
-
-    <Button
-        android:id="@+id/btnProductos"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/valProductos"
-        android:textColor="@color/white"
-        app:backgroundTint="@color/black"
-        app:icon="@drawable/ic_baseline_shopping_basket_24"
-        app:iconGravity="textStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btncategoria"
-        />
-
-    <Button
-        android:id="@+id/btnGenerarComprobante"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/valGenerarComprobante"
-        android:textColor="@color/white"
-        app:backgroundTint="@color/black"
-        app:icon="@drawable/ic_baseline_receipt_24"
-        app:iconGravity="textStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnProductos" />
-
-
-    <Button
-        android:id="@+id/btnListaComprobante"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Visualizar Comprobantes"
-        app:backgroundTint="@color/black"
-        app:icon="@drawable/ic_baseline_request_quote_24"
-        app:iconGravity="textStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGenerarComprobante" />
-
-    <Button
-        android:id="@+id/btnCerrarSesion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/valCerrarSe"
-        app:backgroundTint="@color/black"
-        app:icon="@drawable/ic_baseline_exit_to_app_24"
-        app:iconGravity="textStart"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnListaComprobante"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnProductos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/valProductos"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/black"
+                    app:icon="@drawable/ic_baseline_shopping_basket_24"
+                    app:iconGravity="textStart" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btncategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/valcategoria"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/black"
+                    app:icon="@drawable/ic_baseline_category_24"
+                    app:iconGravity="textStart" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnproveedores"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/valproveedores"
+                    app:backgroundTint="@color/black"
+                    app:icon="@drawable/ic_baseline_directions_bus_24"
+                    app:iconGravity="textStart" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btncliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/valcliente"
+                    app:backgroundTint="@color/black"
+                    app:icon="@drawable/ic_baseline_person_24"
+                    app:iconGravity="textStart" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnmetodopago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/valmetodopago"
+            app:backgroundTint="@color/black"
+            app:icon="@drawable/ic_baseline_payment_24"
+            app:iconGravity="textStart" />
+
+        <Button
+            android:id="@+id/btnGenerarComprobante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/valGenerarComprobante"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/black"
+            app:icon="@drawable/ic_baseline_receipt_24"
+            app:iconGravity="textStart" />
+
+        <Button
+            android:id="@+id/btnListaComprobante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Visualizar Comprobantes"
+            app:backgroundTint="@color/black"
+            app:icon="@drawable/ic_baseline_request_quote_24"
+            app:iconGravity="textStart" />
+
+        <Button
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/valCerrarSe"
+            app:backgroundTint="@color/black"
+            app:icon="@drawable/ic_baseline_exit_to_app_24"
+            app:iconGravity="textStart" />
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -40,24 +40,6 @@
         app:lottie_loop="true" />
 
     <Button
-        android:id="@+id/btnToRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:text="@string/valregistro"
-        android:textColor="@color/ic_launcher_background"
-
-        android:textSize="16sp"
-        app:backgroundTint="@color/black"
-        app:iconTint="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/btnToLogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animation_view"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
         android:id="@+id/btnToLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,9 +49,13 @@
         android:textColor="@color/ic_launcher_background"
         android:textSize="16sp"
         app:backgroundTint="@color/black"
+        app:icon="@drawable/ic_baseline_exit_to_app_24"
+        app:iconGravity="textStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/animation_view"
+        app:layout_constraintVertical_bias="0.799" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
