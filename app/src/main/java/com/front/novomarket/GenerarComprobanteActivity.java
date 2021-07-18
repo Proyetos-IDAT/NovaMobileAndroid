@@ -176,6 +176,7 @@ public class GenerarComprobanteActivity extends AppCompatActivity {
         String valfech=fechas.getText().toString().trim();
         String valpre=etprecio.getText().toString().trim();
         String valcant=etcantidad.getText().toString().trim();
+        //validar campos vacios
         if(valid.isEmpty()){
             etId.setError("Id requerido para el comprobante");
             etId.requestFocus();
@@ -198,9 +199,19 @@ public class GenerarComprobanteActivity extends AppCompatActivity {
             etcantidad.requestFocus();
             return;
         }
-         //falta validar la cantidad que no sea mayor a 100
-        //validad también el precio
-
+        ////////////////
+        ////////////////////////////////////////////////validar caracter
+       /* if(valpre.contains(".") || valpre.contains("@") || valpre.contains("$") || valpre.contains("!") || valpre.contains("¡") || valpre.contains("#") || valpre.contains(":") || valpre.contains(";") || valpre.contains("&") || valpre.contains("_") || valpre.contains("-") || valpre.contains("(") || valpre.contains(")") || valpre.contains("'") || valpre.contains(",") || valpre.contains("?") || valpre.contains("¿") || valpre.contains("+") || valpre.contains("*") || valpre.contains("/") || valpre.contains("=") || valpre.contains("%") || valpre.contains("<") || valpre.contains(">") || valpre.contains("|") || valpre.contains("{") || valpre.contains("}") || valpre.contains("[") || valpre.contains("]")){
+            etprecio.setError("El precio no puede contener caracteres espciales");
+            etprecio.requestFocus();
+            return;
+        }
+        if(valcant.contains(".") || valcant.contains("@") || valcant.contains("$") || valcant.contains("!") || valcant.contains("¡") || valcant.contains("#") || valcant.contains(":") || valcant.contains(";") || valcant.contains("&") || valcant.contains("_") || valcant.contains("-") || valcant.contains("(") || valcant.contains(")") || valcant.contains("'") || valcant.contains(",") || valcant.contains("?") || valcant.contains("¿") || valcant.contains("+") || valcant.contains("*") || valcant.contains("/") || valcant.contains("=") || valcant.contains("%") || valcant.contains("<") || valcant.contains(">") || valcant.contains("|") || valcant.contains("{") || valcant.contains("}") || valcant.contains("[") || valcant.contains("]")){
+            etcantidad.setError("La cantidad no puede contener caracteres espciales");
+            etcantidad.requestFocus();
+            return;
+        }*/
+        //////////////////////////////////////////////////
         //llamada retrofit el cual va a traer relaciones
         long id = Long.parseLong(etId.getText().toString().trim());
         String fecha = fechas.getText().toString();

@@ -57,11 +57,17 @@ public class CategoriaEdActivity extends AppCompatActivity {
                     txtNomCat.requestFocus();
                     return;
                 }
-
+                //validación si hay número
                 if(nomcat.contains("0") || nomcat.contains("1") || nomcat.contains("2") || nomcat.contains("3") ||
                         nomcat.contains("4") || nomcat.contains("5") || nomcat.contains("6") ||
                         nomcat.contains("7") || nomcat.contains("8") || nomcat.contains("9")){
                     txtNomCat.setError("El nombre de la categoria no puede contener números");
+                    txtNomCat.requestFocus();
+                    return;
+                }
+                //validación si tiene caracteres
+                if(nomcat.contains(".") || nomcat.contains("@") || nomcat.contains("$") || nomcat.contains("!") || nomcat.contains("¡") || nomcat.contains("#") || nomcat.contains(":") || nomcat.contains(";") || nomcat.contains("&") || nomcat.contains("_") || nomcat.contains("-") || nomcat.contains("(") || nomcat.contains(")") || nomcat.contains("'") || nomcat.contains(",") || nomcat.contains("?") || nomcat.contains("¿") || nomcat.contains("+") || nomcat.contains("*") || nomcat.contains("/") || nomcat.contains("=") || nomcat.contains("%") || nomcat.contains("<") || nomcat.contains(">") || nomcat.contains("|") || nomcat.contains("{") || nomcat.contains("}") || nomcat.contains("[") || nomcat.contains("]")){
+                    txtNomCat.setError("El nombre de la categoria no puede contener caracteres espciales");
                     txtNomCat.requestFocus();
                     return;
                 }

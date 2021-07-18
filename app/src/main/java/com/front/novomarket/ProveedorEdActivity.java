@@ -113,9 +113,18 @@ public class ProveedorEdActivity extends AppCompatActivity {
                     return;
                 }
                 //////////////////////////////////////////////////////////
-
-
-
+                //validación caracteres
+                if(nompro.contains(".") || nompro.contains("@") || nompro.contains("$") || nompro.contains("!") || nompro.contains("¡") || nompro.contains("#") || nompro.contains(":") || nompro.contains(";") || nompro.contains("&") || nompro.contains("_") || nompro.contains("-") || nompro.contains("(") || nompro.contains(")") || nompro.contains("'") || nompro.contains(",") || nompro.contains("?") || nompro.contains("¿") || nompro.contains("+") || nompro.contains("*") || nompro.contains("/") || nompro.contains("=") || nompro.contains("%") || nompro.contains("<") || nompro.contains(">") || nompro.contains("|") || nompro.contains("{") || nompro.contains("}") || nompro.contains("[") || nompro.contains("]")){
+                    txtNomprove.setError("El nombre del proveedor no puede contener caracteres espciales");
+                    txtNomprove.requestFocus();
+                    return;
+                }
+                if(contacto.contains(".") || contacto.contains("@") || contacto.contains("$") || contacto.contains("!") || contacto.contains("¡") || contacto.contains("#") || contacto.contains(":") || contacto.contains(";") || contacto.contains("&") || contacto.contains("_") || contacto.contains("-") || contacto.contains("(") || contacto.contains(")") || contacto.contains("'") || contacto.contains(",") || contacto.contains("?") || contacto.contains("¿") || contacto.contains("+") || contacto.contains("*") || contacto.contains("/") || contacto.contains("=") || contacto.contains("%") || contacto.contains("<") || contacto.contains(">") || contacto.contains("|") || contacto.contains("{") || contacto.contains("}") || contacto.contains("[") || contacto.contains("]")){
+                    txtNomcontacto.setError("El nombre del contacto del proveedor no puede contener caracteres espciales");
+                    txtNomcontacto.requestFocus();
+                    return;
+                }
+                ///////////////////////////////////////////////////////
 
                 Proveedor pr=new Proveedor();
                 //hemos seteado los nombres y apellidos enviandolo al metodo llevando después al webservice

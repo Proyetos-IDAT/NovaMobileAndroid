@@ -165,6 +165,10 @@ public class ProductosEdActivity extends AppCompatActivity {
             etnom.setError("El nombre del producto no puede contener números");
             etnom.requestFocus();
             return;
+        }if(n.contains(".") || n.contains("@") || n.contains("$") || n.contains("!") || n.contains("¡") || n.contains("#") || n.contains(":") || n.contains(";") || n.contains("&") || n.contains("_") || n.contains("-") || n.contains("(") || n.contains(")") || n.contains("'") || n.contains(",") || n.contains("?") || n.contains("¿") || n.contains("+") || n.contains("*") || n.contains("/") || n.contains("=") || n.contains("%") || n.contains("<") || n.contains(">") || n.contains("|") || n.contains("{") || n.contains("}") || n.contains("[") || n.contains("]")){
+            etnom.setError("El nombre del producto no puede contener caracteres espciales");
+            etnom.requestFocus();
+            return;
         }
 
         int idprov = ((Proveedor) spinnerProv.getSelectedItem()).getIdprove();

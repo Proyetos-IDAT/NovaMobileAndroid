@@ -79,6 +79,7 @@ public class ClienteEdActivity extends AppCompatActivity {
                     txtNumero.setError("El número de teléfono del cliente debe tener 9 digitos");
                     txtNumero.requestFocus();
                     return;
+                    //validación de ingreso de números en plain text
                 }if(nom.contains("0") || nom.contains("1") || nom.contains("2") || nom.contains("3")
                         || nom.contains("4") || nom.contains("5") || nom.contains("6") || nom.contains("7") ||
                         nom.contains("8") || nom.contains("9")){
@@ -89,6 +90,16 @@ public class ClienteEdActivity extends AppCompatActivity {
                         ape.contains("4") || ape.contains("5") || ape.contains("6") || ape.contains("7") ||
                         ape.contains("8") || ape.contains("9")){
                     txtApellidos.setError("El apellido del cliente no puede contener números");
+                    txtApellidos.requestFocus();
+                    return;
+                }
+                 //validación de ingreso de caracteres en plain text
+                if(nom.contains(".") || nom.contains("@") || nom.contains("$") || nom.contains("!") || nom.contains("¡") || nom.contains("#") || nom.contains(":") || nom.contains(";") || nom.contains("&") || nom.contains("_") || nom.contains("-") || nom.contains("(") || nom.contains(")") || nom.contains("'") || nom.contains(",") || nom.contains("?") || nom.contains("¿") || nom.contains("+") || nom.contains("*") || nom.contains("/") || nom.contains("=") || nom.contains("%") || nom.contains("<") || nom.contains(">") || nom.contains("|") || nom.contains("{") || nom.contains("}") || nom.contains("[") || nom.contains("]")){
+                    txtNombres.setError("El nombre del cliente no puede contener caracteres especiales");
+                    txtNombres.requestFocus();
+                    return;
+                }if(ape.contains(".") || ape.contains("@") || ape.contains("$") || ape.contains("!") || ape.contains("¡") || ape.contains("#") || ape.contains(":") || ape.contains(";") || ape.contains("&") || ape.contains("_") || ape.contains("-") || ape.contains("(") || ape.contains(")") || ape.contains("'") || ape.contains(",") || ape.contains("?") || ape.contains("¿") || ape.contains("+") || ape.contains("*") || ape.contains("/") || ape.contains("=") || ape.contains("%") || ape.contains("<") || ape.contains(">") || ape.contains("|") || ape.contains("{") || ape.contains("}") || ape.contains("[") || ape.contains("]")){
+                    txtApellidos.setError("El apellido del cliente no puede contener caracteres especiales");
                     txtApellidos.requestFocus();
                     return;
                 }

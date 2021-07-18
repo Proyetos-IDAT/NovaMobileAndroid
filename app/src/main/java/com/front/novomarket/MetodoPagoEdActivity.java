@@ -62,6 +62,11 @@ public class MetodoPagoEdActivity extends AppCompatActivity {
                     txtTipopago.requestFocus();
                     return;
                 }
+                if(tipopago.contains(".") || tipopago.contains("@") || tipopago.contains("$") || tipopago.contains("!") || tipopago.contains("¡") || tipopago.contains("#") || tipopago.contains(":") || tipopago.contains(";") || tipopago.contains("&") || tipopago.contains("_") || tipopago.contains("-") || tipopago.contains("(") || tipopago.contains(")") || tipopago.contains("'") || tipopago.contains(",") || tipopago.contains("?") || tipopago.contains("¿") || tipopago.contains("+") || tipopago.contains("*") || tipopago.contains("/") || tipopago.contains("=") || tipopago.contains("%") || tipopago.contains("<") || tipopago.contains(">") || tipopago.contains("|") || tipopago.contains("{") || tipopago.contains("}") || tipopago.contains("[") || tipopago.contains("]")){
+                    txtTipopago.setError("El nombre de la categoria no puede contener caracteres espciales");
+                    txtTipopago.requestFocus();
+                    return;
+                }
                 MetodoPago mp=new MetodoPago();
                 //hemos seteado los nombres y apellidos enviandolo al metodo llevando después al webservice
                 mp.setTipopago(txtTipopago.getText().toString());
