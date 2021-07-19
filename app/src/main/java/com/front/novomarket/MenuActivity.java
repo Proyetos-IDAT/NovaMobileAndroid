@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.front.novomarket.common.Constante;
 import com.front.novomarket.common.SharedPreferencesManager;
@@ -17,7 +16,7 @@ import com.front.novomarket.common.SharedPreferencesManager;
 
 public class MenuActivity extends AppCompatActivity {
 
-    Button btncliente, btnproveedor, btnmetodopago, btncategoria, btngenerarcomprobante, btnProductos,btnComprobante;
+    Button btncliente, btnproveedor, btnmetodopago, btnbuscProducto,btncategoria, btngenerarcomprobante, btnProductos,btnComprobante;
 
 
     @Override
@@ -36,6 +35,15 @@ public class MenuActivity extends AppCompatActivity {
         btngenerarcomprobante = findViewById(R.id.btnGenerarComprobante);
         btnProductos = findViewById(R.id.btnProductos);
         btnComprobante=findViewById(R.id.btnListaComprobante);
+        btnbuscProducto=findViewById(R.id.btnBuscadorProducto);
+
+        btnbuscProducto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MenuActivity.this, BuscadorProductoActivity.class));
+            }
+        });
+
 
         btnComprobante.setOnClickListener(new View.OnClickListener() {
             @Override

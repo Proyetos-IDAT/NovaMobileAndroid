@@ -33,14 +33,6 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-            <EditText
-                android:id="@+id/etFiltroProd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/txtHintFiltroProd"
-                android:inputType="textPersonName" />
-
             <ListView
                 android:id="@+id/listView"
                 android:layout_width="match_parent"

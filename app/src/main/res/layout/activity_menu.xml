@@ -168,6 +168,14 @@
             app:iconGravity="textStart" />
 
         <Button
+            android:id="@+id/btnBuscadorProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscador de Producto"
+            app:icon="@drawable/ic_baseline_search_24"
+            app:iconGravity="textStart" />
+
+        <Button
             android:id="@+id/btnGenerarComprobante"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -13,9 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NovoMarket"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ProductosEdActivity"></activity>
+        <activity android:name=".BuscadorProductoActivity"></activity>
+        <activity android:name=".ProductosEdActivity" />
         <activity android:name=".ProductosActivity" />
-        <activity android:name=".GenerarComprobanteActivity"></activity>
+        <activity android:name=".GenerarComprobanteActivity" />
         <activity android:name=".ComprobanteActivity" />
         <activity android:name=".CategoriaEdActivity" />
         <activity android:name=".CategoriaActivity" />

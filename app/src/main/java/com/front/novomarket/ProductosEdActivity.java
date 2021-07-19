@@ -184,7 +184,7 @@ public class ProductosEdActivity extends AppCompatActivity {
         Proveedor provReque = new Proveedor(idprov, null, null,
                 null, null, null);
         ProductoRequest pr = new ProductoRequest(nombre, fechav, precio
-                , stock_act, stock_min, foto, catReque, provReque);
+                ,stock_min, stock_act, foto, catReque, provReque);
         Call<Producto> call = RetrofitClient.getInstance().getAPI().RegistrarProducto(pr);
         call.enqueue(new Callback<Producto>() {
             @Override

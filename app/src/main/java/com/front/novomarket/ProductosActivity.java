@@ -28,7 +28,7 @@ public class ProductosActivity extends AppCompatActivity {
 
     List<Producto> listaProductos = new ArrayList<>();
     ListView listView;
-    EditText etFiltro;
+
     ProductoAdapter adapter;
 
     @Override
@@ -38,7 +38,7 @@ public class ProductosActivity extends AppCompatActivity {
 
 
         listView = findViewById(R.id.listView);
-        etFiltro = findViewById(R.id.etFiltroProd);
+
 
         listarProductos();
 
@@ -56,23 +56,6 @@ public class ProductosActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<Producto>> call, Throwable t) {
                 Log.e("error",t.getMessage());
-            }
-        });
-
-        etFiltro.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                adapter.getFilter().filter(s);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
             }
         });
 
