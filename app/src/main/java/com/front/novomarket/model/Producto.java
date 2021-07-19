@@ -32,6 +32,9 @@ public class Producto {
         this.stock_act = stock_act;
     }
 
+    public Producto() {
+    }
+
     public int getIdprod() {
         return idprod;
     }

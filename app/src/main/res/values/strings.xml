@@ -70,5 +70,6 @@
     <string name="Volver">Regresar</string>
     <string name="valGenerarComprobante">Generar Comprobante</string>
     <string name="valFoto">Url de foto</string>
+    <string name="txtHintFiltroProd">Qué producto está buscando?</string>
 
 </resources>
