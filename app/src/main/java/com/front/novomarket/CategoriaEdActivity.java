@@ -120,7 +120,7 @@ public class CategoriaEdActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Categoria> call, Throwable t) {
-                Toast.makeText(CategoriaEdActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
+                Log.e("Error:",t.getMessage());
             }
         });
 
